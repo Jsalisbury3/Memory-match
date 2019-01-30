@@ -2,7 +2,6 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- <link rel="shortcut icon" href="http://i.imgur.com/5DKiia4.png"> -->
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="main.js"></script>
     <title>Star Wars Memory Match</title>
@@ -15,11 +14,6 @@
     </div> -->
 
    
-
-
-
-
-
     <audio class="dialogue" id="leia" src="sounds/dialogue/leia.mp3"></audio>
     <audio class="dialogue" id="darthVader" src="sounds/dialogue/darthVader.mp3"></audio> 
     <audio class="dialogue" id="yoda" src="sounds/dialogue/yoda.mp3"></audio> 
@@ -48,15 +42,16 @@
                 <div class="value"></div>
             </div>
             <div id="reset">Reset</div>
-            <!--<img src="images/bonfire.jpg" id="reset">-->
         </div>
         <div class="row_health">
             <div id="health_container">
-                <div id="health"></div>
+                <div id="health">
+                    <img class="lightsaberImg"src="images/Qui-Gon_saber.gif" alt="">
+                </div>
             </div>
-            <div class="lightsaber_container">
+            <!-- <div class="lightsaber_container">
                 <img class="lightsaberImg"src="images/Qui-Gon_saber.gif" alt="">
-            </div>
+            </div> -->
             <!-- <div id="stamina_container">
                 <div id="stamina" class="staminaAnimation"></div>
             </div> -->

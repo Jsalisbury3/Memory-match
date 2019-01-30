@@ -4,13 +4,13 @@ body {
     height: 100vh;
     font-family: darkFont;
     /* background-color: #0b0603; */
-    background-color: grey;
+    background-color: silver;
 }
 /* @font-face {
     font-family: darkFont;
     src: url(Moonlight_Shadow.ttf);
 } */
-#desktopOnly{
+/* #desktopOnly{
     font-family: "Arial", sans-serif;
     box-sizing: border-box;
     color: white;
@@ -21,10 +21,11 @@ body {
     width: 100vw;
     text-align: center;
     font-size: 3em;
-    /* background-color: rgb(100,100,100); */
-    background-color: salmon
+    /* background-color: rgb(100,100,100); 
+    background-color: salmon;
     z-index: 3;
-}
+} 
+*/
 #header{
     width: 100vw;
     height: 20vh;
@@ -41,7 +42,7 @@ a{
 a:first-child{
     position: absolute;
     top: 15%;
-    left: 6%;
+
 }
 a:nth-child(2){
     position: absolute;
@@ -55,7 +56,7 @@ a:nth-child(2){
     width: 15vw;
     height: 80vh;
     /* background-color: darkgrey; */
-    background-color: black;
+    background-color: rgb(119,136,153);
     text-align: center;
     border-radius: 20px;
     box-sizing: border-box;
@@ -84,9 +85,17 @@ a:nth-child(2){
     margin: 323px 4px 10px 72%;
     border: 2px solid #fff2fe;
     transform: rotate(90deg); */
-    height: 33%;
+
+    /* height: 33%;
     width: 40%;
-    margin: 33px 0px 22px 41%;
+    margin: 33px 0px 22px 41%; */
+
+    
+    height: 42px;
+    width: 315px;
+    margin: 26px 0px 22px 48%;
+    position: relative;
+    
 }
 
 .lightsaber_container{
@@ -97,7 +106,14 @@ a:nth-child(2){
 }
 
 .lightsaberImg{
-    width:27%
+    /* width:27%;
+    position: absolute;
+    left: 0; */
+
+    width: 194px;
+    position: absolute;
+    left: 0;
+    transform: translate(-91%,-51.25%);
 }
 
 
@@ -105,11 +121,19 @@ a:nth-child(2){
     /* height: 100%;
     width: 100%;
     background-color: red; */
-    height: 76%;
+
+    /* height: 76%;
     width: 100%;
-    background-color: red;
+    background-color: blue;
     border-radius: 14px;
-    box-shadow: 0px 0px 7px 2px red;
+    box-shadow: 0px 0px 7px 2px blue; */
+
+    height: 13px;
+    width: 379px;
+    background-color: blue;
+    border-radius: 13px;
+    box-shadow: 0px 0px 7px 1.5px blue;
+
 }
 
 
@@ -124,12 +148,12 @@ a:nth-child(2){
     background-color: #1dc116;
 } */
 
-.staminaAnimation{
+/* .staminaAnimation{
     animation-name: staminaLoss;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 10s;
-}
+} */
 .row{
     height: 30%;
     width: 100%;
@@ -149,8 +173,8 @@ h2.label {
     margin: 0;
     font-size: 3vmin;
 }
-/* div#reset {
-    color: blanchedalmond;
+div#reset {
+    color: blue;
     padding: 20px;
     box-sizing: border-box;
     font-size: 3vmin;
@@ -158,11 +182,11 @@ h2.label {
     width: 90%;
     height: 25%;
     border-radius: 20px;
-    background-image: url('images/bonfire.jpg');
+    background-image: url('images/bb8_reset.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-} */
+}
 div#reset:hover{
     cursor: pointer;
 }
@@ -194,6 +218,7 @@ div#reset:hover{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    /* src: url("images/star-wars-banner.jpg") */
 }
 .container{
     -webkit-perspective: 1000px;
@@ -227,6 +252,7 @@ div#reset:hover{
 @media only screen and (min-width: 1200px) {
     #row_container {
         width: 1200px;
+       
     }
     .row {
         width: 1200px;
@@ -241,8 +267,128 @@ div#reset:hover{
         width: 1200px;
     }
 }
-/* @media only screen and (max-device-width: 700px){
-    #desktopOnly{
-        display: block;
+
+
+@media only screen and (max-device-width: 700px){
+    
+    .lightsaberImg {
+         width: 250px;
+         position: absolute;
+         left: 0;
+         transform: translate(-86%,-51.25%);
     }
-} */
+ 
+    #health {
+        height: 40%;
+        width: 100%;
+        background-color: blue;
+        border-radius: 13px;
+        box-shadow: 0px 0px 30px 2px blue;
+    }
+    #row_container {
+        margin: 0px 0px 0px 0%
+    
+    }
+    .row {
+        width:100%;
+        height:24%
+    }
+ 
+ 
+ 
+ /*
+    .row_health{
+        
+    }
+    #stats{
+       
+    }
+    #header {
+       
+ 
+    }
+    #banner{
+       
+    } */
+ }
+
+
+
+/* @media only screen and (max-device-width: 700px){
+    #row_container {
+       width: 1800px;
+       height:3500px;
+       margin: 2px 10px 0px 1%;
+       background-image: url('images/star_wars_background_mobile.jpg') !important;
+      
+   }
+   .row {
+       width: 1400px;
+       margin: 0px 5px 220px -2%
+   }
+   .row_health{
+       width: 1200px;
+   }
+   #stats{
+       width: 180px;
+       margin: -10px 0px 0px 0%;
+       height: 127%
+   }
+   #header {
+       width: 1900px;
+
+   }
+   #banner{
+       width: 1200px;
+       height: 600px;
+       margin:80px 0px 0px -9%;
+
+   }
+   .container{
+       width: 350px;
+       height: 400px
+   }
+} 
+
+
+
+
+
+
+ @media only screen and (max-device-width: 700px){
+    #row_container {
+         background-image: url('images/star_wars_background_mobile.jpg');
+   }
+   .row {
+        width:1000px;
+       height:300px; 
+       width:981px;
+       height:300px
+   }
+   .row_health{
+      
+   }
+   #stats{
+       
+   }
+   #header {
+     margin: 0px 0px 0px 1%;
+     height: 1vh
+       
+
+   }
+   #banner{
+      width:700px;
+      height:300px
+
+   }
+   .container{
+       
+   }
+   body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: darkFont;
+    background-color: black;
+}  */
