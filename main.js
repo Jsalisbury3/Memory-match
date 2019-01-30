@@ -1,4 +1,3 @@
-
 var count = 1;
 var clickCount = 0;
 var first_card_clicked = null;
@@ -7,7 +6,7 @@ var match_counter = 0;
 var games_played = 0;
 var canIflip = true;
 var mismatchesAllowed = 10;
-var i=0;
+// var i=0;
 
 
 
@@ -24,10 +23,10 @@ function initializeApp(){
 }
 
 function createBackOfCards(){
-    var imagesArray = ['images/Yoda.png', 'images/darth-vader.jpg','images/han-solo.jpg', 'images/leia.jpg',
-    'images/luke-skywalker.jpg','images/poe.jpg','images/rey.jpeg','images/kylo.jpg','images/finn.jpg','images/Yoda.png',
-     'images/darth-vader.jpg','images/han-solo.jpg', 'images/leia.jpg','images/luke-skywalker.jpg','images/poe.jpg',
-    'images/rey.jpeg','images/kylo.jpg','images/finn.jpg'];
+    var imagesArray = ['images/yoda.png', 'images/darth-vader.jpg','images/han-solo.jpg', 'images/leia.jpg',
+    'images/luke-skywalker.jpg','images/R2-D2.jpg','images/rey.jpeg','images/kylo.jpg','images/c-3po.jpg','images/yoda.png',
+    'images/darth-vader.jpg','images/han-solo.jpg', 'images/leia.jpg','images/luke-skywalker.jpg','images/R2-D2.jpg',
+    'images/rey.jpeg','images/kylo.jpg','images/c-3po.jpg'];
     var randomArray =[];
     for(var i=0; i<18; i++){
         var randomNumber = Math.floor(Math.random()*imagesArray.length);
@@ -45,22 +44,23 @@ function applyBackground(){
     }
 }
 
-// function isSoundPaused(audio){
-//     var isSoundPaused;
-//     for(var i=0; i<audio.length; i++){
-//         if(audio[i].paused){
-//             isSoundPaused = true;
-//         }
-//         else{
-//             isSoundPaused = false;
-//             break;
-//         }
-//     }
-//     return isSoundPaused;
-// }
+function isSoundPaused(audio){
+    var isSoundPaused;
+    for(var i=0; i<audio.length; i++){
+        if(audio[i].paused){
+            isSoundPaused = true;
+        }
+        else{
+            isSoundPaused = false;
+            break;
+        }
+    }
+    return isSoundPaused;
+}
+
 function card_clicked(){
     $('.container').on('click', function () {
-        // if(isSoundPaused($('.dialogue'))) {
+        if(isSoundPaused($('.dialogue'))) {
             if (!$(this).find('.flip').hasClass('flipped')) {
                 if (canIflip === true) {
                     if (first_card_clicked === null) {
@@ -82,7 +82,7 @@ function card_clicked(){
                     }
                 }
             }
-        // }
+        }
     });
 }
 
@@ -105,7 +105,7 @@ function audioPlay(){
     console.log('audio play')
 }
 
-//**********************************************************************************************************
+
 // function playVideo(video){
 //     $('iframe')[0].src=video;
 // }
@@ -114,8 +114,40 @@ function audioPlay(){
 //     $('.modal').css("display","block");
 // }
 
+
+function audioPlay(){
+    switch (first_card_clicked){
+        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/leia.jpg")':
+             $('#leia').get(0).play();
+             break;
+        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/darth-vader.jpg")':
+            $('#darthVader').get(0).play();
+            break;
+        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/yoda.png")':
+            $('#yoda').get(0).play();
+            break;
+        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/han-solo.jpg")':
+            $('#hanSolo').get(0).play();
+            break;
+        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/luke-skywalker.jpg")':
+            $('#lukeSkywalker').get(0).play();
+            break;
+        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/c-3po.jpg")':
+            $('#c3po').get(0).play();
+            break;
+        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/R2-D2.jpg")':
+            $('#r2-d2').get(0).play();
+            break;
+        
+        
+        
+        
+    }
+}
+
 function checkMatch(){
     if(first_card_clicked === second_card_clicked && match_counter < 8  ){
+        console.log(first_card_clicked);
         audioPlay();
         clickCount++;
         match_counter++;
@@ -173,6 +205,9 @@ function takeDamage(mismatchCountdown){
     var health = 10*mismatchCountdown;
     $('#health').css("width",`${health}%`);
 }
+
+
+
 
 
 
