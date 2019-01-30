@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="shortcut icon" href="http://i.imgur.com/5DKiia4.png"> -->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="main.js"></script>
+    <title>Star Wars Memory Match</title>
+    <link rel="icon" href="/lightsaber-icon-2.png">
+</head>
+<body>
+
+    <!-- <div class="modal">
+        <iframe class="video" src="" width="560" height="420" frameborder="0"></iframe>
+    </div> -->
+
+   
+
+
+
+
+
+    <audio class="dialogue" id="leia" src="sounds/dialogue/leia.mp3"></audio>
+    <audio class="dialogue" id="darthVader" src="sounds/dialogue/darthVader.mp3"></audio> 
+    <audio class="dialogue" id="yoda" src="sounds/dialogue/yoda.mp3"></audio> 
+    <audio class="dialogue" id="hanSolo" src="sounds/dialogue/hanSolo.mp3"></audio> 
+    <audio class="dialogue" id="lukeSkywalker" src="sounds/dialogue/lukeSkywalker.mp3"></audio> 
+    <audio class="dialogue" id="c3po" src="sounds/dialogue/c3po.mp3"></audio> 
+    <audio class="dialogue" id="r2-d2" src="sounds/dialogue/r2-d2.mp3"></audio> 
+    
+    <div id="header">
+        <!-- <a href="settings.html">Settings</a>
+        <a href="about.html">About</a> -->
+        <img src="images/star-wars-banner.jpg" id="banner">
+    </div>
+    <div id="row_container">
+        <div id="stats">
+            <div class="games-played">
+                <h2 class="label">Games Played</h2>
+                <div class="value"></div>
+            </div>
+            <div class="attempt">
+                <div class="label">Attempts:</div>
+                <div class="value"></div>
+            </div>
+            <div class="accuracy">
+                <div class="label">Accuracy:</div>
+                <div class="value"></div>
+            </div>
+            <div id="reset">Reset</div>
+            <!--<img src="images/bonfire.jpg" id="reset">-->
+        </div>
+        <div class="row_health">
+            <div id="health_container">
+                <div id="health"></div>
+            </div>
+            <div class="lightsaber_container">
+                <img class="lightsaberImg"src="images/Qui-Gon_saber.gif" alt="">
+            </div>
+            <!-- <div id="stamina_container">
+                <div id="stamina" class="staminaAnimation"></div>
+            </div> -->
+        </div>  
+        <div class="row">
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card1" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card2" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card3" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card4" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card5" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card6" class="face back"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card7" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card8" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card9" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card10" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card11" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card12" class="face back"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card13" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card14" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card15" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card16" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card17" class="face back"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div id="card18" class="face back"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
