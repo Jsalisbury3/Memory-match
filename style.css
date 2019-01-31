@@ -7,6 +7,17 @@ body {
     font-family: darkFont;
     background-color: silver;
 }
+
+.about{
+    font-size: 37px;
+    color: blue;
+   
+}
+.link_to_starting{
+    font-size: 37px;
+    color: blue;
+    
+}
 #header{
     width: 100vw;
     height: 20vh;
@@ -22,12 +33,14 @@ a{
 }
 a:first-child{
     position: absolute;
-    top: 15%;
+    top: 49%;
 
 }
 a:nth-child(2){
     position: absolute;
-    top: 60%;
+    top: 13%;
+    cursor: pointer;
+   
 }
 
 #stats{
