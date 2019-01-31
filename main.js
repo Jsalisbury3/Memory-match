@@ -7,7 +7,7 @@ var games_played = 0;
 var canIflip = true;
 var mismatchesAllowed = 10;
 // var i=0;
-
+var flag = false;
 
 
 $(document).ready(function(){
@@ -20,6 +20,15 @@ function initializeApp(){
     card_clicked();
     $('#reset').click(resetGame);
     // modalClose();
+}
+
+function muteAudio(){
+    flag= true;
+    $("muteIcon").css("text-decoration", "line-through")
+}
+
+function unMuteAudio(){
+    flag=false;
 }
 
 function createBackOfCards(){
@@ -105,17 +114,38 @@ function audioPlay(){
     console.log('audio play')
 }
 
-
-// function playVideo(video){
-//     $('iframe')[0].src=video;
-// }
-
-// function showModal(){
-//     $('.modal').css("display","block");
-// }
-
+function showModalLose(){
+    $('.modalLose').css("display","block");
+    if(flag){
+        return;
+    }else{
+        $("#theme_song").get(0).play();   
+    }
+    
+}
+function modalCloseLose(){
+    $('.modalLose').css("display","none");
+    $("#theme_song").get(0).pause();
+    resetGame();
+}
+function showModalWin(){
+    $('.modalWin').css("display","block");
+    if(flag){
+        return;
+    }else{
+        $("#theme_song").get(0).play();   
+    }
+}
+function modalCloseWin(){
+    $('.modalWin').css("display","none");
+    $("#theme_song").get(0).pause();
+    resetGame();
+}
 
 function audioPlay(){
+    if(flag){
+        return;
+    }
     switch (first_card_clicked){
         case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/leia.jpg")':
              $('#leia').get(0).play();
@@ -138,10 +168,12 @@ function audioPlay(){
         case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/R2-D2.jpg")':
             $('#r2-d2').get(0).play();
             break;
-        
-        
-        
-        
+        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/kylo.jpg")':
+            $('#kyloRen').get(0).play();
+            break;
+        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/rey.jpeg")':
+            $('#rey').get(0).play();
+            break;
     }
 }
 
@@ -157,8 +189,10 @@ function checkMatch(){
         mismatchesAllowed--;
         takeDamage(mismatchesAllowed);
         if(mismatchesAllowed <= 0){
-            // showModal();
+            // losing condition
+            showModalLose();
             // playVideo(youDied);
+            
         }
         clickCount++;
         setTimeout(flipBack, 800);
@@ -173,8 +207,8 @@ function checkMatch(){
             }
         }
         setTimeout(function() {
-            showModal();
-            playVideo(darkEnding);
+            showModalWin();
+            // playVideo(darkEnding);
         },currentTrackLength);
     }
 }
@@ -186,7 +220,7 @@ function resetGame() {
     count = 1;
     mismatchesAllowed = 10;
     games_played++;
-    $('#health').css("width","100%");
+    $('#health').css("width","379px");
     $('.games-played .value').text(games_played);
     clickCount = 0;
     match_counter = 0;
@@ -194,116 +228,9 @@ function resetGame() {
     // $('#staminaAnimation').css('animation-name','staminaLoss');
 
 }
-function modalClose(){
-    $('.modal').click(function(){
-        $('.modal').css("display","none");
-        $('iframe')[0].src='';
-        resetGame();
-    })
-}
+
 function takeDamage(mismatchCountdown){
     var health = 10*mismatchCountdown;
     $('#health').css("width",`${health}%`);
 }
-
-
-
-
-
-
-
-
-
-
-// $(document).ready(initializeApp);
-
-// var first_card_clicked = null;
-// var second_card_clicked = null;
-// var total_possible_matches = 9;
-// var match_counter = 0;
-// var matches = 0;
-// var attempts = 0;
-// var games_played = 0;
-// var accuracy = matches/attempts
-
-// function initializeApp(){
-//     addClickHandlersToElements();
-//     displayStats();
-//     $('.reset').click(resetGame);
-// }
-// function addClickHandlersToElements(){
-//     $(".card").click(handleCardClick);
-// }
-
-// function handleCardClick(){
-    
-//     if(first_card_clicked === null){
-//         first_card_clicked = $(this);
-//         console.log('first card clicked');
-//         showCard(this);
-//     }else{
-//         console.log('second card clicked');
-//         second_card_clicked = $(this);
-//         showCard(this);
-//         attempts++;
-//         if(  $(first_card_clicked).find('.front').css('background-image') === $(second_card_clicked).find('.front').css('background-image')){
-//                 matches++;
-//                 attempts++;
-//                 console.log("They Match");
-//                 first_card_clicked = null;
-//                 second_card_clicked = null;
-//                 accuracy = (matches/attempts)*100;
-//                 accuracy = parseFloat(accuracy).toFixed(0)+ '%';
-//                 displayStats();
-//                 if(matches=== total_possible_matches){
-//                     $('.header_info').text('You won!!');
-//                 }
-//                 }else{
-//                     console.log("not same");
-//                     accuracy = (matches/attempts)*100;
-//                     accuracy = parseFloat(accuracy).toFixed(0)+ '%';
-//                     stopClick();
-//                     setTimeout(onNotMatchingImages, 400);
-//                     startClick();
-//                     displayStats();
-//                 }
-//         }
-// }
-
-// function onNotMatchingImages (){
-//     first_card_clicked.find('.back').removeClass('hide-card');
-//     second_card_clicked.find('.back').removeClass('hide-card');
-//     first_card_clicked = null;
-//     second_card_clicked = null;
-// }
-// function stopClick(){
-//     $('.card').off("click");
-// }
-// function startClick(){
-//     setTimeout(function(){
-//         $('.card').click(handleCardClick);
-//     }, 750);
-// }
-// function showCard(card){
-//     $(card).find('.back').addClass('hide-card');
-// }
-// function displayStats(){
-//     $('.games_value').text(games_played);
-//     $('.attempts_value').text(attempts);
-//     $('.accuracy_value').text(accuracy);
-//     $('.matches').text(matches);
-// }
-// function resetStats(){
-//     accuracy=0;
-//     matches=0;
-//     attempts=0;
-//     displayStats();
-// }
-// function resetGame(){
-//     games_played++
-//     resetStats();
-//     displayStats();
-//     $('.card').find('.back').removeClass('hide-card');
-    
-// }
 
