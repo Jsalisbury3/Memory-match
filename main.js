@@ -6,7 +6,6 @@ var match_counter = 0;
 var games_played = 0;
 var canIflip = true;
 var mismatchesAllowed = 10;
-// var i=0;
 var flag = false;
 
 
@@ -19,12 +18,10 @@ function initializeApp(){
     applyBackground();
     card_clicked();
     $('#reset').click(resetGame);
-    // modalClose();
 }
 
 function muteAudio(){
     flag= true;
-    $("muteIcon").css("text-decoration", "line-through")
 }
 
 function unMuteAudio(){
@@ -39,7 +36,6 @@ function createBackOfCards(){
     var randomArray =[];
     for(var i=0; i<18; i++){
         var randomNumber = Math.floor(Math.random()*imagesArray.length);
-        console.log(randomArray)
         randomArray.push(imagesArray[randomNumber]);
         imagesArray.splice(randomNumber, 1);
     }
@@ -110,10 +106,6 @@ function flipBack() {
     cardDefault();
 }
 
-function audioPlay(){
-    console.log('audio play')
-}
-
 function showModalLose(){
     $('.modalLose').css("display","block");
     if(flag){
@@ -179,7 +171,6 @@ function audioPlay(){
 
 function checkMatch(){
     if(first_card_clicked === second_card_clicked && match_counter < 8  ){
-        console.log(first_card_clicked);
         audioPlay();
         clickCount++;
         match_counter++;
@@ -190,9 +181,7 @@ function checkMatch(){
         takeDamage(mismatchesAllowed);
         if(mismatchesAllowed <= 0){
             // losing condition
-            showModalLose();
-            // playVideo(youDied);
-            
+            showModalLose();          
         }
         clickCount++;
         setTimeout(flipBack, 800);
@@ -208,7 +197,7 @@ function checkMatch(){
         }
         setTimeout(function() {
             showModalWin();
-            // playVideo(darkEnding);
+            
         },currentTrackLength);
     }
 }
@@ -225,8 +214,6 @@ function resetGame() {
     clickCount = 0;
     match_counter = 0;
     cardDefault();
-    // $('#staminaAnimation').css('animation-name','staminaLoss');
-
 }
 
 function takeDamage(mismatchCountdown){

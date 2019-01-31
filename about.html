@@ -1,1 +1,61 @@
-<h1>Hello there</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="about.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            function whatIsClick() {
+                $('#whatIs').click(function(){
+                    var whatIsPopUp = $('<div>').addClass('whatIs infoBox').html("<p> Star Wars is an American epic space opera franchise, created by George Lucas and centered around a film series that began with the eponymous 1977 movie </p>");
+                    $('#main-content').append(whatIsPopUp);
+                    $('#whatIs').mouseout(function(){
+                        $('.whatIs').remove();
+                    });
+                });
+            }
+            function rulesClick() {
+                $('#rules').click(function(){
+                    var rulesPopUp = $('<div>').addClass('rules infoBox').html("<p>This is a simple memory match card game.  As you match cards you will learn a little more about the Star Wars characters and maybe learn a little about the mechanics of the game as well.</p>");
+                    $('#main-content').append(rulesPopUp);
+                    $('#rules').mouseout(function(){
+                        $('.rules').remove();
+                    });
+                });
+            }
+            function doYouClick() {
+                $('#doYou').click(function(){
+                    var doYouPopUp = $('<div>').addClass('doYou infoBox').html("<p>Praise the JavaScript, jQuery, HTML, and CSS!</p>");
+                    $('#main-content').append(doYouPopUp);
+                    $('#doYou').mouseout(function(){
+                        $('.doYou').remove();
+                    });
+                });
+            }
+            whatIsClick();
+            rulesClick();
+            doYouClick();
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="back"><a href="index.html">Back to Game</a></div><p>About this game</p>
+    </div>
+    <div id="main-content">
+        <div id="side-bar">
+            <ul>
+                <li id="whatIs">
+                    What is Star Wars?
+                </li>
+                <li id="rules">
+                    How does this game work?
+                </li>
+                <li id="doYou">
+                    How was this game made?
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
