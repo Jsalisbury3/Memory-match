@@ -5,26 +5,63 @@
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="main.js"></script>
     <title>Star Wars Memory Match</title>
-    <link rel="icon" href="/lightsaber-icon-2.png">
+    <link rel="icon" href="star_wars_icon.png">
 </head>
 <body>
+    <div onClick="modalCloseLose()"class="modalLose">
+        <head>
+            <link rel="stylesheet" type="text/css" href="style2.css">
+            <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+            <script src="ending.js"></script> 
+        </head>
+        <body>
+            <div class="fade"></div>
+                <section class="star-wars">
+                    <div class="crawl">
+                            <div class="title">
+                                <p>Episode IV</p>
+                                <h1>Memory Match Fail</h1>
+                            </div>
+                            <p>Your trash</p>
+                    </div>
+                </section>
+        </body>
+    </div>
 
-    <!-- <div class="modal">
-        <iframe class="video" src="" width="560" height="420" frameborder="0"></iframe>
-    </div> -->
-
-   
-    <audio class="dialogue" id="leia" src="sounds/dialogue/leia.mp3"></audio>
-    <audio class="dialogue" id="darthVader" src="sounds/dialogue/darthVader.mp3"></audio> 
-    <audio class="dialogue" id="yoda" src="sounds/dialogue/yoda.mp3"></audio> 
-    <audio class="dialogue" id="hanSolo" src="sounds/dialogue/hanSolo.mp3"></audio> 
-    <audio class="dialogue" id="lukeSkywalker" src="sounds/dialogue/lukeSkywalker.mp3"></audio> 
-    <audio class="dialogue" id="c3po" src="sounds/dialogue/c3po.mp3"></audio> 
-    <audio class="dialogue" id="r2-d2" src="sounds/dialogue/r2-d2.mp3"></audio> 
-    
+    <div onClick="modalCloseWin()"class="modalWin">
+            <head>
+                <link rel="stylesheet" type="text/css" href="style2.css">
+                <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+                <script src="ending.js"></script>
+            </head>
+            <body>
+                <div class="fade"></div>
+                    <section class="star-wars">
+                        <div class="crawl">
+                                <div class="title">
+                                    <p>Episode IV</p>
+                                    <h1>Memory Match Victory</h1>
+                                </div>
+                                <p>You won</p>
+                        </div>
+                    </section>
+            </body>    
+    </div>
+    <div className="audio">
+        <audio class="dialogue" id="leia" src="sounds/dialogue/leia.mp3"></audio>
+        <audio class="dialogue" id="darthVader" src="sounds/dialogue/darthVader.mp3"></audio> 
+        <audio class="dialogue" id="yoda" src="sounds/dialogue/yoda.mp3"></audio> 
+        <audio class="dialogue" id="hanSolo" src="sounds/dialogue/hanSolo.mp3"></audio> 
+        <audio class="dialogue" id="lukeSkywalker" src="sounds/dialogue/lukeSkywalker.mp3"></audio> 
+        <audio class="dialogue" id="c3po" src="sounds/dialogue/c3po.mp3"></audio> 
+        <audio class="dialogue" id="r2-d2" src="sounds/dialogue/r2-d2.mp3"></audio> 
+        <audio class="dialogue" id="kyloRen" src="sounds/dialogue/kylo_ren.mp3"></audio> 
+        <audio class="dialogue" id="rey" src="sounds/dialogue/rey.mp3"></audio> 
+        <audio class="dialogue" id="theme_song" src="sounds/dialogue/theme_song.mp3"></audio> 
+    </div>
     <div id="header">
-        <!-- <a href="settings.html">Settings</a>
-        <a href="about.html">About</a> -->
+        <a target="/blank" href="settings.html">Settings</a>
+        <a target="/blank" href="about.html">About</a>
         <img src="images/star-wars-banner.jpg" id="banner">
     </div>
     <div id="row_container">
@@ -42,6 +79,10 @@
                 <div class="value"></div>
             </div>
             <div id="reset">Reset</div>
+            <button onClick="muteAudio()">Mute Audio</button>
+            <img class="muteIcon" onClick="muteAudio()" src="images/audio_icon.png" alt="">
+            <button onClick="unMuteAudio()">Unmute Audio</button>
+            
         </div>
         <div class="row_health">
             <div id="health_container">
@@ -56,7 +97,7 @@
                 <div id="stamina" class="staminaAnimation"></div>
             </div> -->
         </div>  
-        <div class="row">
+        <!-- <div class="row"> -->
             <div class="container">
                 <div class="flip">
                     <div class="face front"></div>
@@ -93,8 +134,8 @@
                     <div id="card6" class="face back"></div>
                 </div>
             </div>
-        </div>
-        <div class="row">
+        <!-- </div> -->
+        <!-- <div class="row"> -->
             <div class="container">
                 <div class="flip">
                     <div class="face front"></div>
@@ -131,8 +172,8 @@
                     <div id="card12" class="face back"></div>
                 </div>
             </div>
-        </div>
-        <div class="row">
+        <!-- </div> -->
+        <!-- <div class="row"> -->
             <div class="container">
                 <div class="flip">
                     <div class="face front"></div>
@@ -169,7 +210,7 @@
                     <div id="card18" class="face back"></div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 </body>
 </html>
