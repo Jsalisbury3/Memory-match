@@ -1,35 +1,12 @@
-/* :root {
-    --width: width: 100%;
-} */
+
 
 body {
     margin: 0;
     width: 100vw;
     height: 100vh;
     font-family: darkFont;
-    /* background-color: #0b0603; */
     background-color: silver;
 }
-/* @font-face {
-    font-family: darkFont;
-    src: url(Moonlight_Shadow.ttf);
-} */
-/* #desktopOnly{
-    font-family: "Arial", sans-serif;
-    box-sizing: border-box;
-    color: white;
-    padding-top: 200px;
-    display: none;
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-    font-size: 3em;
-    /* background-color: rgb(100,100,100); 
-    background-color: salmon;
-    z-index: 3;
-} 
-*/
 #header{
     width: 100vw;
     height: 20vh;
@@ -59,7 +36,6 @@ a:nth-child(2){
     float: left;
     width: 15vw;
     height: 80vh;
-    /* background-color: darkgrey; */
     background-color: rgb(119,136,153);
     text-align: center;
     border-radius: 20px;
@@ -84,20 +60,9 @@ a:nth-child(2){
     margin: auto;
 }
 #health_container{
-    /* height: 33%;
-    width: 40%;
-    margin: 323px 4px 10px 72%;
-    border: 2px solid #fff2fe;
-    transform: rotate(90deg); */
-
-    /* height: 33%;
-    width: 40%;
-    margin: 33px 0px 22px 41%; */
-
-    
     height: 42px;
     width: 315px;
-    margin: 26px 0px 22px 48%;
+    margin: 39px 0px 22px 48%;
     position: relative;
     
 }
@@ -105,15 +70,10 @@ a:nth-child(2){
 .lightsaber_container{
     /* transform: rotate(90deg); */
     width: 50%;
-    /* height: 16%; */
     margin: -100px 8px 5px 29%;
 }
 
 .lightsaberImg{
-    /* width:27%;
-    position: absolute;
-    left: 0; */
-
     width: 194px;
     position: absolute;
     left: 0;
@@ -122,16 +82,6 @@ a:nth-child(2){
 
 
 #health{
-    /* height: 100%;
-    width: 100%;
-    background-color: red; */
-
-    /* height: 76%;
-    width: 100%;
-    background-color: blue;
-    border-radius: 14px;
-    box-shadow: 0px 0px 7px 2px blue; */
-
     height: 13px;
     width: 379px;
     background-color: blue;
@@ -140,24 +90,38 @@ a:nth-child(2){
 
 }
 
+.muteButton, .unMuteButton{
+    width: 57%;
+    height: 9%;
+    border-radius: 11px;
+    background-color: lavenderblush;
+    margin-top: 46px;
+}
+
+.muteButton:hover{
+    cursor: pointer;
+}
+.unMuteButton:hover{
+    cursor: pointer;
+}
+
 .muteIcon{
     width:20%;
+    text-decoration: line-through;
 }
+
+
 
 .muteIcon:hover{
     cursor: pointer;
 }
-
-
-
-
-
 .modalLose{
     display: none;
     height: 100vh;
     width: 100vw;
     position: fixed;
     background-color: rgba(100,100,100,.5);
+    /* background-image: url('images/star-wars-stars.png'); */
     z-index: 1;
 }
 
@@ -167,43 +131,20 @@ a:nth-child(2){
     width: 100vw;
     position: fixed;
     background-color: rgba(100,100,100,.5);
+    /* background-image: url('images/star-wars-stars.png'); */
     z-index: 1;
 }
-
-
-/* #stamina_container{
-    margin: 10px 0 10px 20%;
-    height: 33%;
-    width: 25%;
-    border: 2px solid #fff2fe;
-}
-#stamina{
-    height: 100%;
-    background-color: #1dc116;
-} */
-
-/* .staminaAnimation{
-    animation-name: staminaLoss;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: 10s;
-} */
 .row{
     height: 30%;
     width: 100%;
 }
 .container {
     display: inline-block;
-    /* height: 60%;
-    width: 8%; */
     margin: 3% 0 3% 3%;
     border-radius: 10px;
-     /* -webkit-perspective: 1000px; */
-     position: relative;
-     width: 9%;
-     height: 19%;
-    
-
+    position: relative;
+    width: 9%;
+    height: 19%;
 }
 .value {
     height: 40px;
@@ -242,22 +183,24 @@ div#reset:hover{
 .back {
     height: 100%;
     width: 100%;
-    /* border: 1px solid silver; */
     border: 1px solid white;
     background-size: 100% 100%;
     border-radius: 10px;
     position: absolute;
 }
 #banner {
-    position: relative;
-    /* height: 70%; */
+    /* position: relative;
     width: 60%;
-    /* margin-left: 200px; */
-    /* margin-top: 25px; */
     top: 50%;
     left: 50%;
+    transform: translate(-50%,-50%); */
+
+    position: relative;
+    width: 62%;
+    top: 57%;
+    left: 55%;
     transform: translate(-50%,-50%);
-    /* src: url("images/star-wars-banner.jpg") */
+   
 }
 
 .container .flip.flipped{
@@ -335,7 +278,13 @@ div#reset:hover{
         height:13%;
     }
  
- 
+    #banner{
+        position: relative;
+        width: 80%;
+        top: 45%;
+        left: 55%;
+        transform: translate(-50%,-50%);
+    }
  
  /*
     .row_health{
