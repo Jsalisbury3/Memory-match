@@ -1,3 +1,6 @@
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-text)
+}
 
 
 body {
@@ -17,6 +20,7 @@ body {
 .link_to_starting{
     font-size: 37px;
     color:yellow;
+    font-family: 'Poller One';
     
 }
 #header{
@@ -98,9 +102,11 @@ a:nth-child(2){
 #health{
     height: 13px;
     width: 379px;
-    background-color: blue;
+    /* background-color: blue; */
+    background-color:hsl(229, 100%, 50%);
     border-radius: 13px;
-    box-shadow: 0px 0px 7px 1.5px blue;
+    /* box-shadow: 0px 0px 7px 1.5px blue; */
+
 
 }
 
@@ -112,6 +118,7 @@ a:nth-child(2){
     background-color: black;
     color: yellow;
     margin-top: 46px;
+    font-family: 'Poller One';
 }
 
 .muteButton:hover{
@@ -180,6 +187,11 @@ a:nth-child(2){
 h2.label {
     margin: 0;
     font-size: 3vmin;
+    font-family: 'Poller One';
+}
+
+div.label{
+    font-family: 'Poller One';
 }
 div#reset {
     color: yellow;
@@ -194,6 +206,7 @@ div#reset {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Poller One';
 }
 div#reset:hover{
     cursor: pointer;
@@ -225,9 +238,10 @@ div#reset:hover{
 
     position: relative;
     width: 62%;
-    top: 57%;
+    top: 66px;
     left: 55%;
     transform: translate(-50%,-50%);
+    cursor:pointer;
    
 }
 
@@ -257,10 +271,6 @@ div#reset:hover{
 }
 
 
-
-
-
-
 @media only screen and (min-width: 1200px) {
     #row_container {
         width: 1200px;
@@ -277,6 +287,26 @@ div#reset:hover{
     }
     #header {
         width: 1200px;
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+    #row_container {
+        
+       
+    }
+    .row {
+        
+    }
+    .row_health{
+        
+    }
+    #stats{
+       
+    }
+    #header {
+        
     }
 }
 

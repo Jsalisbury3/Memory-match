@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="main.js"></script>
     <title>Star Wars Memory Match</title>
@@ -19,11 +20,12 @@
                 <section class="star-wars">
                     <div class="crawl">
                             <div class="title">
-                                <p>CLICK TO CLOSE</p>
+                                <p>Episode IV</p>
                                 <h1>Memory Match Fail</h1>
                             </div>
                             <p>You have failed to resist the power of the dark side. Emporer Palpatine has taken control of you as you feel the the power of
                                 the dark side pulse through your veins. The first order now controls all of the galaxy...</p>
+                            <p>Click to close </p>
                     </div>
                 </section>
         </body>
@@ -40,10 +42,11 @@
                     <section class="star-wars">
                         <div class="crawl">
                                 <div class="title">
-                                    <p>CLICK TO CLOSE</p>   
+                                    <p>Episode IV</p>   
                                     <h1>Memory Match Victory</h1>
                                 </div>
                                 <p> Congradulations! you have proved yourself as a true Jedi Knight. You have resisted the dark side and reclamed peace to the galaxy!.</p>
+                                <p>Click to close </p>
                         </div>
                     </section>
             </body>    
@@ -59,26 +62,27 @@
         <audio class="dialogue" id="kyloRen" src="sounds/dialogue/kylo_ren.mp3" volume="0.5"></audio> 
         <audio class="dialogue" id="rey" src="sounds/dialogue/rey.mp3" volume="0.5"></audio> 
         <audio class="dialogue" id="theme_song" src="sounds/dialogue/theme_song.mp3" volume="0.5"></audio> 
+        <audio class="dialogue" id="imperial_march" src="sounds/dialogue/imperial_march.mp3" volume="0.5"></audio> 
     </div>
     <div id="header">
         <!-- <a target="/blank" href="settings.html">Settings</a> -->
         <!-- <a class="about" href="about.html">About</a> -->
-        <a class="link_to_starting" href="index.html">Starting Page</a>
-        <img src="images/star-wars-banner.jpg" id="banner">
+        <a src="images/star-wars-banner.jpg" class="link_to_starting" href="index.html">Home</a>
+        <a href="index.html"><img src="images/star-wars-banner.jpg" id="banner"></a>
     </div>
     <div id="row_container">
         <div id="stats">
             <div class="games-played">
                 <h2 class="label">Games Played</h2>
-                <div class="value"></div>
+                <div class="value">0</div>
             </div>
             <div class="attempt">
                 <div class="label">Attempts:</div>
-                <div placeholder=0 class="value"></div>
+                <div contentEditable=true data-text="0" class="value"></div>
             </div>
             <div class="accuracy">
                 <div class="label">Accuracy:</div>
-                <div class="value"></div>
+                <div contentEditable=true data-text="0%" class="value"></div>
             </div>
             <div id="reset">Reset</div>
              <!-- <button class="unMuteButton"onClick="unMuteAudio()">Unmute Audio</button> -->

@@ -79,6 +79,7 @@ function card_clicked(){
                 if (canIflip === true) {
                     if (first_card_clicked === null) {
                         $(this).find('.flip').addClass('flipped');
+
                         first_card_clicked = $(this).find('.back').css('background-image');
                         clickCount++;
                     }
@@ -121,13 +122,14 @@ function showModalLose(){
     if(flag){
         return;
     }else{
-        $("#theme_song").get(0).play();   
+        $("#imperial_march").get(0).play();   
     }
     
 }
 function modalCloseLose(){
     $('.modalLose').css("display","none");
-    $("#theme_song").get(0).pause();
+    $("#imperial_march").get(0).load();
+    $("#imperial_march").get(0).pause();
     resetGame();
 }
 function showModalWin(){
@@ -140,6 +142,7 @@ function showModalWin(){
 }
 function modalCloseWin(){
     $('.modalWin').css("display","none");
+    $("#theme_song").get(0).load();
     $("#theme_song").get(0).pause();
     resetGame();
 }
@@ -215,9 +218,14 @@ function checkMatch(){
 }
 
 function resetGame() {
+    if(clickCount=== 0 ){
+        return;
+    }
     $('.flipped').removeClass('flipped');
     $('.attempt .value').html("");
     $('.accuracy .value').html("");
+    $('#health').css('background-color', "blue");
+    $('#health').css('box-shadow', "0px 0px 7px 1.5px blue");
     count = 1;
     mismatchesAllowed = 10;
     games_played++;
@@ -233,6 +241,48 @@ function resetGame() {
 function takeDamage(mismatchCountdown){
     var health = 10*mismatchCountdown;
     $('#health').css("width",`${health}%`);
+    switch(health){
+        case 90:
+            $('#health').css('background-color', "hsl(267, 34%, 58%)")
+            $('#health').css('box-shadow', "0px 0px 7px 1.5px hsl(267, 34%, 58%)")
+            break;
+        case 80:  
+            $('#health').css('background-color', "hsl(112, 66%, 39%)");
+            $('#health').css('box-shadow', "0px 0px 7px 1.5px hsl(112, 66%, 39%)")
+            break; 
+        case 70:
+            $('#health').css('background-color', "hsl(63, 71%, 45%)");
+            $('#health').css('box-shadow', "0px 0px 7px 1.5px hsl(63, 71%, 45%)")
+            break;
+        case 60:
+            $('#health').css('background-color', "hsl(34, 75%, 59%)");
+            $('#health').css('box-shadow', "0px 0px 7px 1.5px hsl(34, 75%, 59%)")
+            break;
+        case 50:
+            $('#health').css('background-color', "red")
+            $('#health').css('box-shadow', "0px 0px 7px 1.5px red")
+            break;
+        case 40:
+            $('#health').css('background-color', "hsl(112, 66%, 39%)");
+            $('#health').css('box-shadow', "0px 0px 7px 1.5px hsl(112, 66%, 39%)")
+            break;
+        case 30:
+            $('#health').css('background-color', "blue");
+            $('#health').css('box-shadow', "0px 0px 7px 1.5px blue")
+            break;
+        case 20:
+            $('#health').css('background-color', "hsl(267, 34%, 58%)");
+            $('#health').css('box-shadow', "0px 0px 7px 1.5px hsl(267, 34%, 58%)")
+            break;
+        case 10:
+            $('#health').css('background-color', "red");
+            $('#health').css('box-shadow', "0px 0px 7px 1.5px red")
+            break;
+        case 0:
+            $('#health').css('background-color', "blue");
+            $('#health').css('box-shadow', "0px 0px 7px 1.5px blue")
+            break;
+    } 
 }
 
 
