@@ -22,15 +22,47 @@
         <audio class="dialogue" id="theme_song" src="sounds/dialogue/theme_song.mp3" volume="0.5"></audio> 
         <audio class="dialogue" id="imperial_march" src="sounds/dialogue/imperial_march.mp3" volume="0.5"></audio> 
     </div>
-    
-
-
-
-
+    <div onClick="modalCloseLose()"class="modalLose">
+            <head>
+                <link rel="stylesheet" type="text/css" href="style2.css">
+            </head>
+            <body>
+                <div class="fade"></div>
+                    <section class="star-wars">
+                        <div class="crawl">
+                                <div class="title">
+                                    <p>Episode IV</p>
+                                    <h1>Memory Match Fail</h1>
+                                </div>
+                                <p>You have failed to resist the power of the dark side. Emporer Palpatine has taken control of you as you feel the the power of
+                                    the dark side pulse through your veins. The first order now controls all of the galaxy...</p>
+                                <p>Click to close </p>
+                        </div>
+                    </section>
+            </body>
+        </div>
+        <div onClick="modalCloseWin()"class="modalWin">
+                <head>
+                    <link rel="stylesheet" type="text/css" href="style2.css">
+                </head>
+                <body>
+                    <div class="fade"></div>
+                        <section class="star-wars">
+                            <div class="crawl">
+                                    <div class="title">
+                                        <p>Episode IV</p>   
+                                        <h1>Memory Match Victory</h1>
+                                    </div>
+                                    <p> Congradulations! you have proved yourself as a true Jedi Knight. You have resisted the dark side and reclamed peace to the galaxy!.</p>
+                                    <p>Click to close </p>
+                            </div>
+                        </section>
+                </body>    
+        </div>
     <div id="header">
         <a class="about" href="about.html">About</a> 
          <a src="images/star-wars-banner.jpg" class="link_to_starting" href="home.html">Home</a>
-        <a href="index.html"><img src="images/star-wars-banner.jpg" id="banner"></a>
+        <a href="home.html"><img src="images/star-wars-banner.jpg" id="banner"></a>
     </div>
     <div id="row_container">
         <div id="stats">

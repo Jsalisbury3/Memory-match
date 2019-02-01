@@ -1,8 +1,6 @@
 [contentEditable=true]:empty:not(:focus):before{
     content:attr(data-text)
 }
-
-
 body {
     margin: 0;
     width: 100vw;
@@ -11,18 +9,15 @@ body {
     background-color: silver;
     cursor: url('images/normal.cur'), auto;
 }
-
 .about{
     font-size: 25px;
     color:yellow;
     font-family: 'Poller One';
-   
 }
 .link_to_starting{
     font-size: 25px;
     color:yellow;
-    font-family: 'Poller One';
-    
+    font-family: 'Poller One';  
 }
 #header{
     width: 100vw;
@@ -40,15 +35,11 @@ a{
 a:first-child{
     position: absolute;
     top: 49%;
-
 }
 a:nth-child(2){
     position: absolute;
     top: 13%;
-    cursor: pointer;
-   
 }
-
 #stats{
     margin-top: 1px;
     margin-right: 20px;
@@ -82,57 +73,36 @@ a:nth-child(2){
     height: 42px;
     width: 315px;
     margin: 39px 0px 22px 48%;
-    position: relative;
-    
+    position: relative;   
 }
-
 .lightsaber_container{
-    /* transform: rotate(90deg); */
     width: 50%;
     margin: -100px 8px 5px 29%;
 }
-
 .lightsaberImg{
     width: 194px;
     position: absolute;
     left: 0;
     transform: translate(-91%,-51.25%);
 }
-
-
 #health{
     height: 13px;
     width: 379px;
-    /* background-color: blue; */
     background-color:hsl(229, 100%, 50%);
     border-radius: 13px;
-    /* box-shadow: 0px 0px 7px 1.5px blue; */
-
-
+    box-shadow: 0px 0px 7px 1.5px blue;
 }
-
 .muteButton{
     width: 57%;
     height: 9%;
     border-radius: 11px;
-    /* background-color: lavenderblush; */
     background-color: black;
     color: yellow;
     margin-top: 46px;
     font-family: 'Poller One';
 }
-
 .muteButton:hover{
-    cursor: pointer;
-}
-.unMuteButton:hover{
-    cursor: pointer;
-}
-.muteIcon{
-    width:20%;
-    text-decoration: line-through;
-}
-.muteIcon:hover{
+    box-shadow: 0px 0px 7px 4px white;
     cursor: pointer;
 }
 .modalLose{
@@ -141,22 +111,15 @@ a:nth-child(2){
     width: 100vw;
     position: fixed;
     background-color: rgba(100,100,100,.5);
-    /* background-image: url('images/star-wars-stars.png'); */
     z-index: 1;
 }
-
 .modalWin{
     display: none;
     height: 100vh;
     width: 100vw;
     position: fixed;
     background-color: rgba(100,100,100,.5);
-    /* background-image: url('images/star-wars-stars.png'); */
     z-index: 1;
-}
-.row{
-    height: 30%;
-    width: 100%;
 }
 .container {
     display: inline-block;
@@ -194,7 +157,7 @@ div#reset {
     font-family: 'Poller One';
 }
 div#reset:hover{
-    cursor: pointer;
+    box-shadow: 0px 0px 7px 4px white;
 }
 .front{
     height: 100%;
@@ -208,7 +171,6 @@ div#reset:hover{
 }
 
 .front:hover{
-    cursor: pointer;
     box-shadow: 0px 0px 7px 4px white;
 }
 .back {
@@ -220,11 +182,6 @@ div#reset:hover{
     position: absolute;
 }
 #banner {
-    /* position: relative;
-    width: 60%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%); */
     position: relative;
     width: 58%;
     top: 98px;
@@ -269,49 +226,48 @@ div#reset:hover{
         position: absolute;
         left: 0;
         transform: translate(-86%,-51.25%);
-   }
-   #health {
-       height: 40%;
-       width: 100%;
-       background-color: blue;
-       border-radius: 13px;
-       box-shadow: 0px 0px 30px 2px blue;
-   }
-   #row_container {
-       margin: 0px 0px 0px 0%
-   }
-   /* .row {
-       width:100%;
-       height:24%
-   } */
-   .container{
+    }
+    #health {
+        height: 40%;
+        width: 100%;
+        background-color: blue;
+        border-radius: 13px;
+        box-shadow: 0px 0px 30px 2px blue;
+    }
+    #row_container {
+        margin: 0px 0px 0px 0%
+    }
+    .container{
        width:15%;
        height:13%;
-   }
-   #banner{
+    }
+    #banner{
        position: relative;
        width: 79%;
        top: 120px;
        left: 58%;
        transform: translate(-50%,-50%);
        margin:auto;
-   }
-   div#reset{
+    }
+    div#reset{
        font-size:15px;
 
-   }
-   .link_to_starting {
-   font-size: 25px;    
+    }
+    .link_to_starting {
+        font-size: 25px;    
+    }
+    .link_to_starting:hover{
+        cursor: pointer;
+        
     }
     .about{
-    font-size: 25px;
+        font-size: 25px;
     }
-
-
-
+    .about:hover{
+        cursor: pointer; 
+    }
 }
-/* desktop media Query */
- @media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     #row_container {
         width: 1200px;
        
@@ -329,7 +285,6 @@ div#reset:hover{
         width: 1200px;
     }
 } 
-
 @media only screen and (max-width: 800px) and (min-width: 400px)  {
 
     #stats{
@@ -344,7 +299,7 @@ div#reset:hover{
         width:15%;
     }
     div#reset{
-       font-size:10px;
+        font-size:10px;
         transform: rotate(-90deg);
         height:18%;
         width:70px;
@@ -352,20 +307,20 @@ div#reset:hover{
 
    }
     h2.label{
-       transform: rotate(-90deg);
-       font-size:10px;
-       right:18px;
-       position: relative;
-       top:10px;
+        transform: rotate(-90deg);
+        font-size:10px;
+        right:18px;
+        position: relative;
+        top:10px;
        
     }
     .label{
-       transform: rotate(-90deg);
-       font-size:10px;
-       position: relative;
-       top:4px;
-       margin:9px;
-       right:25px;
+        transform: rotate(-90deg);
+        font-size:10px;
+        position: relative;
+        top:4px;
+        margin:9px;
+        right:25px;
     }
     #row_container{
         position:relative;
@@ -374,18 +329,16 @@ div#reset:hover{
         right:70px;
     }
     .value{
-      transform: rotate(-90deg);  
-      position: relative;
-      left: 38%; 
-      bottom:30px
+        transform: rotate(-90deg);  
+        position: relative;
+        left: 38%; 
+        bottom:30px
     }
-     #health_container {
-      transform: translate(-10%,-150.25%);
-      height:20px;
-
-
-   }
-   #health{
+    #health_container {
+        transform: translate(-10%,-150.25%);
+        height:20px;
+    }
+    #health{
         width:90%
     }
    #banner{
@@ -396,191 +349,30 @@ div#reset:hover{
         top:70px
     }
     .link_to_starting {
-   font-size: 15px;    
+        font-size: 15px;    
     }
     .about{
-    font-size: 15px;
+        font-size: 15px;
     }
     .muteButton{
-    transform: rotate(-90deg);
-    position:relative;
-    top:0px;  
-    bottom:50%;
-    background-color:transparent;
-    border:0px solid transparent;
+        transform: rotate(-90deg);
+        position:relative;
+        top:-20px;  
+        bottom:50%;
+        background-color:transparent;
+        border:0px solid transparent;
+        font-size: 8px;
+    }
+    .muteButton:hover{
+        box-shadow: 0px 0px 7px 4px white;
     }
     .container{
-    width:58px;
-    bottom:10px;
-    height:70px;
-    position:relative;
-  
-
+        width:58px;
+        bottom:10px;
+        height:70px;
+        position:relative;
     }
    
 
 
 }   
-
-
-
-
-
-
-
-
-
-/* @media only screen and (max-width: 1100px) {
-    #row_container {
-        
-       
-    }
-    .row {
-        
-    }
-    .row_health{
-        
-    }
-    #stats{
-       
-    }
-    #header {
-        
-    }
-} */
-
-
-/* @media only screen and (max-device-width: 700px){
-    
-    .lightsaberImg {
-         width: 250px;
-         position: absolute;
-         left: 0;
-         transform: translate(-86%,-51.25%);
-    }
- 
-    #health {
-        height: 40%;
-        width: 100%;
-        background-color: blue;
-        border-radius: 13px;
-        box-shadow: 0px 0px 30px 2px blue;
-    }
-    #row_container {
-        margin: 0px 0px 0px 0%
-    
-    }
-    .row {
-        width:100%;
-        height:24%
-        /* calc(--width / 4) */
-    
-    /* .container{
-        width:15%;
-        height:13%;
-    }
- 
-    #banner{
-        position: relative;
-        width: 80%;
-        top: 45%;
-        left: 55%;
-        transform: translate(-50%,-50%);
-    }  */
- 
- /*
-    .row_health{
-        
-    }
-    #stats{
-       
-    }
-    #header {
-       
- 
-    }
-    #banner{
-       
-    } */
- 
-
-
-
-/* @media only screen and (max-device-width: 700px){
-    #row_container {
-       width: 1800px;
-       height:3500px;
-       margin: 2px 10px 0px 1%;
-       background-image: url('images/star_wars_background_mobile.jpg') !important;
-      
-   }
-   .row {
-       width: 1400px;
-       margin: 0px 5px 220px -2%
-   }
-   .row_health{
-       width: 1200px;
-   }
-   #stats{
-       width: 180px;
-       margin: -10px 0px 0px 0%;
-       height: 127%
-   }
-   #header {
-       width: 1900px;
-
-   }
-   #banner{
-       width: 1200px;
-       height: 600px;
-       margin:80px 0px 0px -9%;
-
-   }
-   .container{
-       width: 350px;
-       height: 400px
-   }
-} 
-
-
-
-
-
-
- @media only screen and (max-device-width: 700px){
-    #row_container {
-         background-image: url('images/star_wars_background_mobile.jpg');
-   }
-   .row {
-        width:1000px;
-       height:300px; 
-       width:981px;
-       height:300px
-   }
-   .row_health{
-      
-   }
-   #stats{
-       
-   }
-   #header {
-     margin: 0px 0px 0px 1%;
-     height: 1vh
-       
-
-   }
-   #banner{
-      width:700px;
-      height:300px
-
-   }
-   .container{
-       
-   }
-   body {
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    font-family: darkFont;
-    background-color: black;
-}  */
