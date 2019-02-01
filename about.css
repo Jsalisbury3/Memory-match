@@ -11,6 +11,7 @@ body{
 a{
     text-decoration: none;
     color: blanchedalmond;
+    color: #feda4a;
 }
 a:hover{
     cursor: pointer;
@@ -38,6 +39,7 @@ a:hover{
     text-align: center;
     margin-top:0;
     padding-top: 4%;
+    color: #feda4a;
 }
 ul{
     margin:0;
@@ -51,6 +53,7 @@ li {
     list-style-type: none;
     cursor: pointer;
     margin: 38% 0;
+    color: #feda4a;
 }
 .whatIs{
     top: 10%;
