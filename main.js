@@ -21,12 +21,19 @@ function initializeApp(){
 }
 
 function muteAudio(){
-    flag= true;
+    if(!flag){
+        $('.muteButton').text("Unmute Audio")
+        flag=true
+    }else{
+        $('.muteButton').text('Mute Audio')
+        flag=false
+    }
+    // flag= true;
 }
 
-function unMuteAudio(){
-    flag=false;
-}
+// function unMuteAudio(){
+//     flag=false;
+// }
 
 function createBackOfCards(){
     var imagesArray = ['images/yoda.png', 'images/darth-vader.jpg','images/han-solo.jpg', 'images/leia.jpg',
@@ -41,9 +48,11 @@ function createBackOfCards(){
     }
     return randomArray;
 }
-var backgroundArray = createBackOfCards();
+// var backgroundArray = createBackOfCards();
+
 
 function applyBackground(){
+    var backgroundArray = createBackOfCards();
     for(var i=1; i<=backgroundArray.length; i++){
         $('#card'+i).css('background-image',"url("+backgroundArray[i-1]+")");
     }
@@ -76,6 +85,7 @@ function card_clicked(){
                     else {
                         if (!$(this).find('.flip').hasClass('flipped')) {
                             $(this).find('.flip').addClass("flipped");
+                            // remove hover
                             second_card_clicked = $(this).find('.back').css('background-image');
                             canIflip = false;
                             checkMatch();
@@ -175,6 +185,8 @@ function checkMatch(){
         clickCount++;
         match_counter++;
         cardDefault();
+        // removeHover();
+
     }
     else if (first_card_clicked !== second_card_clicked) {
         mismatchesAllowed--;
@@ -214,6 +226,8 @@ function resetGame() {
     clickCount = 0;
     match_counter = 0;
     cardDefault();
+    applyBackground();
+    card_clicked();
 }
 
 function takeDamage(mismatchCountdown){
@@ -221,3 +235,7 @@ function takeDamage(mismatchCountdown){
     $('#health').css("width",`${health}%`);
 }
 
+
+// function removeHover(){
+//     $('body').removeClass('nojQuery');
+// }

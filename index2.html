@@ -7,12 +7,12 @@
     <title>Star Wars Memory Match</title>
     <link rel="icon" href="lightsaber-icon-2.png">
 </head>
-<body>
+<body class="nojQuery">
     <div onClick="modalCloseLose()"class="modalLose">
         <head>
             <link rel="stylesheet" type="text/css" href="style2.css">
             <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-            <script src="ending.js"></script> 
+            <!-- <script src="ending.js"></script>  -->
         </head>
         <body>
             <div class="fade"></div>
@@ -33,7 +33,7 @@
             <head>
                 <link rel="stylesheet" type="text/css" href="style2.css">
                 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-                <script src="ending.js"></script>
+                <!-- <script src="ending.js"></script> -->
             </head>
             <body>
                 <div class="fade"></div>
@@ -62,7 +62,7 @@
     </div>
     <div id="header">
         <!-- <a target="/blank" href="settings.html">Settings</a> -->
-        <a class="about" href="about.html">About</a>
+        <!-- <a class="about" href="about.html">About</a> -->
         <a class="link_to_starting" href="index.html">Starting Page</a>
         <img src="images/star-wars-banner.jpg" id="banner">
     </div>
@@ -74,14 +74,14 @@
             </div>
             <div class="attempt">
                 <div class="label">Attempts:</div>
-                <div class="value"></div>
+                <div placeholder=0 class="value"></div>
             </div>
             <div class="accuracy">
                 <div class="label">Accuracy:</div>
                 <div class="value"></div>
             </div>
             <div id="reset">Reset</div>
-             <button class="unMuteButton"onClick="unMuteAudio()">Unmute Audio</button>
+             <!-- <button class="unMuteButton"onClick="unMuteAudio()">Unmute Audio</button> -->
             <!-- <img class="muteIcon" onClick="muteAudio()" src="images/audio_icon.png" alt="">  -->
             <button class="muteButton"onClick="muteAudio()">Mute Audio</button>
         </div>

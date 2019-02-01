@@ -6,6 +6,7 @@ body {
     height: 100vh;
     font-family: darkFont;
     background-color: silver;
+    cursor: url('images/normal.cur'), auto;
 }
 
 .about{
@@ -15,7 +16,7 @@ body {
 }
 .link_to_starting{
     font-size: 37px;
-    color: blue;
+    color:yellow;
     
 }
 #header{
@@ -103,11 +104,13 @@ a:nth-child(2){
 
 }
 
-.muteButton, .unMuteButton{
+.muteButton{
     width: 57%;
     height: 9%;
     border-radius: 11px;
-    background-color: lavenderblush;
+    /* background-color: lavenderblush; */
+    background-color: black;
+    color: yellow;
     margin-top: 46px;
 }
 
@@ -122,6 +125,18 @@ a:nth-child(2){
     width:20%;
     text-decoration: line-through;
 }
+
+.container:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 4px white;
+}
+
+/* body.nojQuery .flipped:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 4px white; 
+} */
+
+
 
 
 
@@ -167,7 +182,7 @@ h2.label {
     font-size: 3vmin;
 }
 div#reset {
-    color: blue;
+    color: yellow;
     padding: 20px;
     box-sizing: border-box;
     font-size: 3vmin;
@@ -218,6 +233,7 @@ div#reset:hover{
 
 .container .flip.flipped{
     -webkit-transform: rotateY(-180deg);
+    box-shadow: 0px 0px 0px 0px; 
 }
 .container .flip{
     width: 100%;
@@ -239,6 +255,10 @@ div#reset:hover{
 .container .flip .back{
     -webkit-transform: rotateY(-180deg);
 }
+
+
+
+
 
 
 @media only screen and (min-width: 1200px) {
