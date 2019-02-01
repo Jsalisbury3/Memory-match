@@ -338,8 +338,14 @@ div#reset:hover{
         bottom:30px
     }
     #health_container {
-        transform: translate(-10%,-150.25%);
+        transform: translate(-10%,-180.25%);
         height:20px;
+    }
+    .lightsaberImg {
+        width: 130px;
+        position: absolute;
+        left: 0;
+        transform: translate(-85%,-48.25%);
     }
     #health{
         width:90%
