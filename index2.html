@@ -8,49 +8,7 @@
     <title>Star Wars Memory Match</title>
     <link rel="icon" href="lightsaber-icon-2.png">
 </head>
-<body class="nojQuery">
-    <div onClick="modalCloseLose()"class="modalLose">
-        <head>
-            <link rel="stylesheet" type="text/css" href="style2.css">
-            <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-            <!-- <script src="ending.js"></script>  -->
-        </head>
-        <body>
-            <div class="fade"></div>
-                <section class="star-wars">
-                    <div class="crawl">
-                            <div class="title">
-                                <p>Episode IV</p>
-                                <h1>Memory Match Fail</h1>
-                            </div>
-                            <p>You have failed to resist the power of the dark side. Emporer Palpatine has taken control of you as you feel the the power of
-                                the dark side pulse through your veins. The first order now controls all of the galaxy...</p>
-                            <p>Click to close </p>
-                    </div>
-                </section>
-        </body>
-    </div>
-
-    <div onClick="modalCloseWin()"class="modalWin">
-            <head>
-                <link rel="stylesheet" type="text/css" href="style2.css">
-                <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-                <!-- <script src="ending.js"></script> -->
-            </head>
-            <body>
-                <div class="fade"></div>
-                    <section class="star-wars">
-                        <div class="crawl">
-                                <div class="title">
-                                    <p>Episode IV</p>   
-                                    <h1>Memory Match Victory</h1>
-                                </div>
-                                <p> Congradulations! you have proved yourself as a true Jedi Knight. You have resisted the dark side and reclamed peace to the galaxy!.</p>
-                                <p>Click to close </p>
-                        </div>
-                    </section>
-            </body>    
-    </div>
+<body>
     <div className="audio">
         <audio class="dialogue" id="leia" src="sounds/dialogue/leia.mp3" volume="0.5"></audio>
         <audio class="dialogue" id="darthVader" src="sounds/dialogue/darthVader.mp3" volume="0.5"></audio> 
@@ -64,10 +22,14 @@
         <audio class="dialogue" id="theme_song" src="sounds/dialogue/theme_song.mp3" volume="0.5"></audio> 
         <audio class="dialogue" id="imperial_march" src="sounds/dialogue/imperial_march.mp3" volume="0.5"></audio> 
     </div>
+    
+
+
+
+
     <div id="header">
-        <!-- <a target="/blank" href="settings.html">Settings</a> -->
-        <!-- <a class="about" href="about.html">About</a> -->
-        <a src="images/star-wars-banner.jpg" class="link_to_starting" href="index.html">Home</a>
+        <a class="about" href="about.html">About</a> 
+         <a src="images/star-wars-banner.jpg" class="link_to_starting" href="home.html">Home</a>
         <a href="index.html"><img src="images/star-wars-banner.jpg" id="banner"></a>
     </div>
     <div id="row_container">
@@ -85,8 +47,6 @@
                 <div contentEditable=true data-text="0%" class="value"></div>
             </div>
             <div id="reset">Reset</div>
-             <!-- <button class="unMuteButton"onClick="unMuteAudio()">Unmute Audio</button> -->
-            <!-- <img class="muteIcon" onClick="muteAudio()" src="images/audio_icon.png" alt="">  -->
             <button class="muteButton"onClick="muteAudio()">Mute Audio</button>
         </div>
         <div class="row_health">
@@ -95,9 +55,6 @@
                     <img class="lightsaberImg"src="images/Qui-Gon_saber.gif" alt="">
                 </div>
             </div>
-            <!-- <div class="lightsaber_container">
-                <img class="lightsaberImg"src="images/Qui-Gon_saber.gif" alt="">
-            </div> -->
         </div>  
             <div class="container">
                 <div class="flip">

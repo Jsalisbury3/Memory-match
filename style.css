@@ -13,12 +13,13 @@ body {
 }
 
 .about{
-    font-size: 37px;
-    color: blue;
+    font-size: 25px;
+    color:yellow;
+    font-family: 'Poller One';
    
 }
 .link_to_starting{
-    font-size: 37px;
+    font-size: 25px;
     color:yellow;
     font-family: 'Poller One';
     
@@ -49,7 +50,7 @@ a:nth-child(2){
 }
 
 #stats{
-    margin-top: 0;
+    margin-top: 1px;
     margin-right: 20px;
     float: left;
     width: 15vw;
@@ -127,26 +128,10 @@ a:nth-child(2){
 .unMuteButton:hover{
     cursor: pointer;
 }
-
 .muteIcon{
     width:20%;
     text-decoration: line-through;
 }
-
-.container:hover{
-    cursor: pointer;
-    box-shadow: 0px 0px 7px 4px white;
-}
-
-/* body.nojQuery .flipped:hover{
-    cursor: pointer;
-    box-shadow: 0px 0px 7px 4px white; 
-} */
-
-
-
-
-
 .muteIcon:hover{
     cursor: pointer;
 }
@@ -221,6 +206,11 @@ div#reset:hover{
     position: absolute;
     border: 1px solid silver;
 }
+
+.front:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 4px white;
+}
 .back {
     height: 100%;
     width: 100%;
@@ -235,14 +225,12 @@ div#reset:hover{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%); */
-
     position: relative;
-    width: 62%;
-    top: 66px;
-    left: 55%;
+    width: 58%;
+    top: 98px;
+    left: 54%;
     transform: translate(-50%,-50%);
-    cursor:pointer;
-   
+    cursor: pointer; 
 }
 
 .container .flip.flipped{
@@ -270,8 +258,60 @@ div#reset:hover{
     -webkit-transform: rotateY(-180deg);
 }
 
+/* iphone portrait media query */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .lightsaberImg {
+        width: 250px;
+        position: absolute;
+        left: 0;
+        transform: translate(-86%,-51.25%);
+   }
+   #health {
+       height: 40%;
+       width: 100%;
+       background-color: blue;
+       border-radius: 13px;
+       box-shadow: 0px 0px 30px 2px blue;
+   }
+   #row_container {
+       margin: 0px 0px 0px 0%
+   }
+   /* .row {
+       width:100%;
+       height:24%
+   } */
+   .container{
+       width:15%;
+       height:13%;
+   }
+   #banner{
+       position: relative;
+       width: 79%;
+       top: 120px;
+       left: 58%;
+       transform: translate(-50%,-50%);
+       margin:auto;
+   }
+   div#reset{
+       font-size:15px;
 
-@media only screen and (min-width: 1200px) {
+   }
+   .link_to_starting {
+   font-size: 25px;    
+    }
+    .about{
+    font-size: 25px;
+    }
+
+
+
+}
+/* desktop media Query */
+ @media only screen and (min-width: 1200px) {
     #row_container {
         width: 1200px;
        
@@ -288,10 +328,109 @@ div#reset:hover{
     #header {
         width: 1200px;
     }
-}
+} 
+
+@media only screen and (max-width: 800px) and (min-width: 400px)  {
+
+    #stats{
+        transform: rotate(90deg);
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        top: 44%;
+        left: 52%;
+        height: 90%;
+        width:15%;
+    }
+    div#reset{
+       font-size:10px;
+        transform: rotate(-90deg);
+        height:18%;
+        width:70px;
+        position:relative;
+
+   }
+    h2.label{
+       transform: rotate(-90deg);
+       font-size:10px;
+       right:18px;
+       position: relative;
+       top:10px;
+       
+    }
+    .label{
+       transform: rotate(-90deg);
+       font-size:10px;
+       position: relative;
+       top:4px;
+       margin:9px;
+       right:25px;
+    }
+    #row_container{
+        position:relative;
+        width:700px;
+
+        right:70px;
+    }
+    .value{
+      transform: rotate(-90deg);  
+      position: relative;
+      left: 38%; 
+      bottom:30px
+    }
+     #health_container {
+      transform: translate(-10%,-150.25%);
+      height:20px;
 
 
-@media only screen and (max-width: 1100px) {
+   }
+   #health{
+        width:90%
+    }
+   #banner{
+        position:relative;
+        left:50%;
+        width:60%;
+        height:70%;
+        top:70px
+    }
+    .link_to_starting {
+   font-size: 15px;    
+    }
+    .about{
+    font-size: 15px;
+    }
+    .muteButton{
+    transform: rotate(-90deg);
+    position:relative;
+    top:0px;  
+    bottom:50%;
+    background-color:transparent;
+    border:0px solid transparent;
+    }
+    .container{
+    width:58px;
+    bottom:10px;
+    height:70px;
+    position:relative;
+  
+
+    }
+   
+
+
+}   
+
+
+
+
+
+
+
+
+
+/* @media only screen and (max-width: 1100px) {
     #row_container {
         
        
@@ -308,10 +447,10 @@ div#reset:hover{
     #header {
         
     }
-}
+} */
 
 
-@media only screen and (max-device-width: 700px){
+/* @media only screen and (max-device-width: 700px){
     
     .lightsaberImg {
          width: 250px;
@@ -335,8 +474,8 @@ div#reset:hover{
         width:100%;
         height:24%
         /* calc(--width / 4) */
-    }
-    .container{
+    
+    /* .container{
         width:15%;
         height:13%;
     }
@@ -347,7 +486,7 @@ div#reset:hover{
         top: 45%;
         left: 55%;
         transform: translate(-50%,-50%);
-    }
+    }  */
  
  /*
     .row_health{
@@ -363,7 +502,7 @@ div#reset:hover{
     #banner{
        
     } */
- }
+ 
 
 
 

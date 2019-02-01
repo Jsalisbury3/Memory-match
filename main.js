@@ -188,7 +188,7 @@ function checkMatch(){
         clickCount++;
         match_counter++;
         cardDefault();
-        // removeHover();
+        removeHover();
 
     }
     else if (first_card_clicked !== second_card_clicked) {
@@ -286,6 +286,6 @@ function takeDamage(mismatchCountdown){
 }
 
 
-// function removeHover(){
-//     $('body').removeClass('nojQuery');
-// }
+function removeHover(){
+    $('.flipped').removeClass('front:hover');
+}
