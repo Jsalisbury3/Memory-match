@@ -8,18 +8,14 @@ var canIflip = true;
 var mismatchesAllowed = 10;
 var flag = false;
 
-
 $(document).ready(function(){
-    // $("#backgroundMusic").get(0).play();
     initializeApp();
 });
-
 function initializeApp(){
     applyBackground();
     card_clicked();
     $('#reset').click(resetGame);
 }
-
 function muteAudio(){
     if(!flag){
         $('.muteButton').text("Unmute Audio")
@@ -28,13 +24,7 @@ function muteAudio(){
         $('.muteButton').text('Mute Audio')
         flag=false
     }
-    // flag= true;
 }
-
-// function unMuteAudio(){
-//     flag=false;
-// }
-
 function createBackOfCards(){
     var imagesArray = ['images/yoda.png', 'images/darth-vader.jpg','images/han-solo.jpg', 'images/leia.jpg',
     'images/luke-skywalker.jpg','images/R2-D2.jpg','images/rey.jpeg','images/kylo.jpg','images/c-3po.jpg','images/yoda.png',
@@ -48,16 +38,12 @@ function createBackOfCards(){
     }
     return randomArray;
 }
-// var backgroundArray = createBackOfCards();
-
-
 function applyBackground(){
     var backgroundArray = createBackOfCards();
     for(var i=1; i<=backgroundArray.length; i++){
         $('#card'+i).css('background-image',"url("+backgroundArray[i-1]+")");
     }
 }
-
 function isSoundPaused(audio){
     var isSoundPaused;
     for(var i=0; i<audio.length; i++){
@@ -71,7 +57,6 @@ function isSoundPaused(audio){
     }
     return isSoundPaused;
 }
-
 function card_clicked(){
     $('.container').on('click', function () {
         if(isSoundPaused($('.dialogue'))) {
@@ -79,14 +64,12 @@ function card_clicked(){
                 if (canIflip === true) {
                     if (first_card_clicked === null) {
                         $(this).find('.flip').addClass('flipped');
-
                         first_card_clicked = $(this).find('.back').css('background-image');
                         clickCount++;
                     }
                     else {
                         if (!$(this).find('.flip').hasClass('flipped')) {
                             $(this).find('.flip').addClass("flipped");
-                            // remove hover
                             second_card_clicked = $(this).find('.back').css('background-image');
                             canIflip = false;
                             checkMatch();
@@ -101,13 +84,11 @@ function card_clicked(){
         }
     });
 }
-
 function cardDefault(){
     first_card_clicked = null;
     second_card_clicked = null;
     canIflip = true;
 }
-
 function flipBack() {
     $('.flipped').filter(function () {
         var back = $(this).find('.back');
@@ -116,15 +97,13 @@ function flipBack() {
     }).removeClass('flipped');
     cardDefault();
 }
-
 function showModalLose(){
     $('.modalLose').css("display","block");
     if(flag){
         return;
     }else{
         $("#imperial_march").get(0).play();   
-    }
-    
+    }  
 }
 function modalCloseLose(){
     $('.modalLose').css("display","none");
@@ -146,7 +125,6 @@ function modalCloseWin(){
     $("#theme_song").get(0).pause();
     resetGame();
 }
-
 function audioPlay(){
     if(flag){
         return;
@@ -181,21 +159,18 @@ function audioPlay(){
             break;
     }
 }
-
 function checkMatch(){
     if(first_card_clicked === second_card_clicked && match_counter < 8  ){
         audioPlay();
         clickCount++;
         match_counter++;
         cardDefault();
-        // removeHover();
-
+        removeHover();
     }
     else if (first_card_clicked !== second_card_clicked) {
         mismatchesAllowed--;
         takeDamage(mismatchesAllowed);
         if(mismatchesAllowed <= 0){
-            // losing condition
             showModalLose();          
         }
         clickCount++;
@@ -211,12 +186,10 @@ function checkMatch(){
             }
         }
         setTimeout(function() {
-            showModalWin();
-            
+            showModalWin(); 
         },currentTrackLength);
     }
 }
-
 function resetGame() {
     if(clickCount=== 0 ){
         return;
@@ -237,7 +210,6 @@ function resetGame() {
     applyBackground();
     card_clicked();
 }
-
 function takeDamage(mismatchCountdown){
     var health = 10*mismatchCountdown;
     $('#health').css("width",`${health}%`);
@@ -284,8 +256,6 @@ function takeDamage(mismatchCountdown){
             break;
     } 
 }
-
-
-// function removeHover(){
-//     $('body').removeClass('nojQuery');
-// }
+function removeHover(){
+    $('.flipped').removeClass('front:hover');
+}

@@ -1,3 +1,7 @@
+html{
+    cursor: url('images/normal.cur'), auto;
+}
+
 body{
     margin:0;
     background-color: #0b0603;
@@ -46,16 +50,19 @@ li {
     padding: 15% 5%;
     list-style-type: none;
     cursor: pointer;
-    margin: 58% 0;
+    margin: 38% 0;
 }
 .whatIs{
     top: 10%;
+    font-family: 'Poller One';
 }
 .rules{
     top: 40%;
+    font-family: 'Poller One';
 }
 .doYou{
     top: 70%;
+    font-family: 'Poller One';
 }
 .infoBox {
     position: absolute;
@@ -66,7 +73,7 @@ li {
     padding: 1%;
     font-size: 2vmin;
     color: blanchedalmond;
-    font-family: 'Roboto', Avenir, sans-serif;
+    font-family: 'Poller One';
     display: inline-block;
 
 }
@@ -90,8 +97,8 @@ li {
     left: 4%;
     position: relative;
     font-size: 3vmin;
-    font-family: 'Roboto', Avenir, sans-serif;
-    top: 38%;
+    font-family: 'Poller One';
+    top: 15%;
 }
 @media only screen and (min-width: 1200px) {
     #header {
@@ -103,4 +110,20 @@ li {
     #side-bar{
         width: 200px;
     }
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+     #main-content{
+        background-image: url('images/about_background.png');
+        width: 100%;
+        height:100%;
+        margin-right:auto;
+        position:relative;
+        left: 20px;
+        bottom: 20px;
+     }
 }
