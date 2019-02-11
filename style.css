@@ -7,7 +7,8 @@ body {
     height: 100vh;
     font-family: darkFont;
     background-color: silver;
-    cursor: url('images/normal.cur'), auto;
+    /* cursor: url('images/normal.cur'), auto; */
+    cursor: url('images/oth28.cur'), auto;
 }
 .about{
     font-size: 25px;
@@ -63,6 +64,7 @@ a:nth-child(2){
 }
 #row_container{
     background-image: url('images/star_wars_background.jpg');
+    background-position: 50% 50%;
     background-size: cover;
     width: 100vw;
     height: 80vh;
@@ -145,7 +147,7 @@ div#reset {
     color: yellow;
     padding: 20px;
     box-sizing: border-box;
-    font-size: 3vmin;
+    font-size: 2vmin;
     margin-top: 40%;
     width: 90%;
     height: 25%;
@@ -214,6 +216,29 @@ div#reset:hover{
 .container .flip .back{
     -webkit-transform: rotateY(-180deg);
 }
+
+
+.audio-tag{
+    width:40px;
+}
+
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+      }
+      .shake {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+      }
 
 /* iphone portrait media query */
 @media only screen 
@@ -288,7 +313,7 @@ div#reset:hover{
         width: 1200px;
     }
 } 
-@media only screen and (max-width: 800px) and (min-width: 400px), screen and (max-height:780px) and (min-height:193px) {
+@media only screen and (max-width: 800px) and (min-width: 400px), screen and (max-height:750px) and (min-height:193px) {
 
     #stats{
         transform: rotate(90deg);
@@ -296,10 +321,10 @@ div#reset:hover{
         align-items: center;
         justify-content: center;
         text-align: center;
-        top: 44%;
-        left: 52%;
-        height: 90%;
-        width:15%;
+        top:260px;
+        left:340px;
+        height:420px;
+        width:110px;
     }
     div#reset{
         font-size:10px;
@@ -382,28 +407,19 @@ div#reset:hover{
         height:70px;
         position:relative;
     }
-   
-
-
 }  
-
-
-@media only screen and (max-width: 550px) and (min-width: 400px), screen and (max-height: 570px) and (min-height: 192px){
-
-    
-
+@media only  screen and (max-height: 666px) and (min-height: 192px){
     #health_container {
     margin: -4px;
     margin-left: 290px;
     width:35%;
-
-
-}
+    }
 .lightsaberImg { 
     position: absolute;
     left: 0;
     transform: translate(-85%,-48.25%);
 }
+
 #health {
     height: 13px;
     width: 100%;
@@ -413,16 +429,9 @@ div#reset:hover{
 
 }
 .container{
-   height: 10%;
-   width:9%
-}
-#banner{
-   position: relative;
-   width: 79%;
-   top: 50px;
-   left: 58%;
-   transform: translate(-50%,-50%);
-   margin:auto;
+   height: 13%;
+   width:9%;
+   bottom:25px
 }
 div#reset{
    font-size:8px;
@@ -450,7 +459,7 @@ div#reset{
     position:relative;
     height:500px;
     width:86px;
-    top:90px
+    top:160px;
 }
 
 h2.label{
@@ -471,4 +480,204 @@ h2.label{
         right:25px;
     }
 
+}
+
+@media screen and (max-height:569px){
+    #stats{
+        top:140px
+    }
+}
+
+@media screen and (max-height:543px){
+    #stats{
+        top:110px
+    }
+}
+@media screen and (max-height:506px){
+    #stats{
+        top:90px
+    }
+}
+
+@media screen and (max-height:482px){
+    #stats{
+        top:80px
+    }
+}
+@media screen and (max-height:469px){
+    #stats{
+        top:70px
+    }
+}
+@media screen and (max-height:450px){
+    #stats{
+        top:60px
+    }
+}
+@media only screen and (max-width: 556px) and (min-width:426px){
+    #stats{
+         height:370px;
+         position: relative;
+         top:34%;
+         left:290px;
+         align-items:center;
+         justify-content:center;
+         transform: rotate(90deg);        
+         text-align: center;
+         width:15%;
+     
+     }
+     .container{
+         width:8%;
+         height:8%;
+         position:relative;
+         float:left;
+         display:block;
+         margin-right:21px;
+         top:-20px;
+         left:37px;
+     }
+     #row_container{
+         width:500px
+     }
+     #health_container {
+         margin: -4px;
+         margin-left: 240px;
+         width:50%;
+     }
+ 
+     #health {
+         height: 14px;
+         background-color: blue;
+         border-radius: 13px;
+         box-shadow: 0px 0px 30px 2px blue;
+ 
+     }
+     #banner{
+         width:65%;
+         height:60%;
+         position:relative;
+         left:250px
+     }
+     div#reset{
+         font-size:8px;
+         height:55px;
+         right:10px
+ 
+     }
+       .link_to_starting {
+         font-size: 10px;    
+     }
+     .about{
+         font-size: 10px;
+     }
+       h2.label{
+         transform: rotate(-90deg);
+         font-size:10px;
+         right:18px;
+         position: relative;
+         top:1px;
+         font-size:8px
+        
+     }
+     .label{
+         transform: rotate(-90deg);
+         font-size:10px;
+         position: relative;
+         top:10px;
+         margin:9px;
+         right:25px;
+         font-size:8px
+     }
+       .value{
+         transform: rotate(-90deg);  
+         position: relative;
+         left: 49%; 
+         bottom:33px
+     }
+ 
+ 
+}
+ 
+ @media screen and (max-width: 425px){
+     #stats{
+         height:370px;
+         position: relative;
+         top:34%;
+         left:230px;
+         align-items:center;
+         justify-content:center;
+         transform: rotate(90deg);        
+         text-align: center;
+         width:15%;
+     
+     }
+     .container{
+         width:8%;
+         height:8%;
+         position:relative;
+         float:left;
+         display:block;
+         margin-right:21px;
+         top:-20px;
+     }
+     #row_container{
+         width:500px
+     }
+     #health_container {
+         margin: -4px;
+         margin-left: 200px;
+         width:50%;
+     }
+ 
+     #health {
+         height: 14px;
+         background-color: blue;
+         border-radius: 13px;
+         box-shadow: 0px 0px 30px 2px blue;
+ 
+     }
+     #banner{
+         width:65%;
+         height:60%;
+         position:relative;
+         left:250px
+     }
+     div#reset{
+         font-size:8px;
+         height:55px;
+         right:10px
+ 
+     }
+       .link_to_starting {
+         font-size: 10px;    
+     }
+     .about{
+         font-size: 10px;
+     }
+       h2.label{
+         transform: rotate(-90deg);
+         font-size:10px;
+         right:18px;
+         position: relative;
+         top:1px;
+         font-size:8px
+        
+     }
+     .label{
+         transform: rotate(-90deg);
+         font-size:10px;
+         position: relative;
+         top:10px;
+         margin:9px;
+         right:25px;
+         font-size:8px
+     }
+       .value{
+         transform: rotate(-90deg);  
+         position: relative;
+         left: 49%; 
+         bottom:33px
+     }
+ 
 }

@@ -14,7 +14,8 @@ $(document).ready(function(){
 function initializeApp(){
     applyBackground();
     card_clicked();
-    $('#reset').click(resetGame);
+    $('#reset').click(resetGame); 
+    $('.audio-tag').hide()
 }
 function muteAudio(){
     if(!flag){
@@ -49,6 +50,7 @@ function isSoundPaused(audio){
     for(var i=0; i<audio.length; i++){
         if(audio[i].paused){
             isSoundPaused = true;
+            $('.audio-tag').hide()
         }
         else{
             isSoundPaused = false;
@@ -60,7 +62,9 @@ function isSoundPaused(audio){
 function card_clicked(){
     $('.container').on('click', function () {
         if(isSoundPaused($('.dialogue'))) {
+         
             if (!$(this).find('.flip').hasClass('flipped')) {
+          
                 if (canIflip === true) {
                     if (first_card_clicked === null) {
                         $(this).find('.flip').addClass('flipped');
@@ -161,6 +165,7 @@ function audioPlay(){
 }
 function checkMatch(){
     if(first_card_clicked === second_card_clicked && match_counter < 8  ){
+        $('.audio-tag').show()
         audioPlay();
         clickCount++;
         match_counter++;
