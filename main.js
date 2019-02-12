@@ -16,13 +16,16 @@ function initializeApp(){
     card_clicked();
     $('#reset').click(resetGame); 
     $('.audio-tag').hide()
+    // $('.audio-tag').show()
 }
 function muteAudio(){
     if(!flag){
         $('.muteButton').text("Unmute Audio")
+        // $('.audio-tag').css('display','none');
         flag=true
     }else{
         $('.muteButton').text('Mute Audio')
+        // $('.audio-tag').css('display','block');
         flag=false
     }
 }
@@ -50,7 +53,6 @@ function isSoundPaused(audio){
     for(var i=0; i<audio.length; i++){
         if(audio[i].paused){
             isSoundPaused = true;
-            $('.audio-tag').hide()
         }
         else{
             isSoundPaused = false;
@@ -135,37 +137,81 @@ function audioPlay(){
     }
     switch (first_card_clicked){
         case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/leia.jpg")':
-             $('#leia').get(0).play();
+            $('.audio-tag').show()
+            $('.audio-tag').addClass('shake')
+            $('#leia').get(0).play();
+            $('#leia').get(0).onended = function(){
+                $('.audio-tag').hide()
+            }
              break;
         case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/darth-vader.jpg")':
+            $('.audio-tag').show()
+            $('.audio-tag').addClass('shake')
             $('#darthVader').get(0).play();
+            $('#darthVader').get(0).onended = function(){
+                $('.audio-tag').hide()
+            }
             break;
         case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/yoda.png")':
+            $('.audio-tag').show()
+            $('.audio-tag').addClass('shake')
             $('#yoda').get(0).play();
+            $('#yoda').get(0).onended = function(){
+                $('.audio-tag').hide()
+            }
             break;
         case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/han-solo.jpg")':
+            $('.audio-tag').show()
+            $('.audio-tag').addClass('shake')
             $('#hanSolo').get(0).play();
+            $('#hanSolo').get(0).onended = function(){
+                $('.audio-tag').hide()
+            }
             break;
         case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/luke-skywalker.jpg")':
+            $('.audio-tag').show()
+            $('.audio-tag').addClass('shake')
             $('#lukeSkywalker').get(0).play();
+            $('#lukeSkywalker').get(0).onended = function(){
+                $('.audio-tag').hide()
+            }
             break;
         case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/c-3po.jpg")':
+            $('.audio-tag').show()
+            $('.audio-tag').addClass('shake')
             $('#c3po').get(0).play();
+            $('#c3po').get(0).onended = function(){
+                $('.audio-tag').hide()
+            }
             break;
         case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/R2-D2.jpg")':
+            $('.audio-tag').show()
+            $('.audio-tag').addClass('shake')
             $('#r2-d2').get(0).play();
+            $('#r2-d2').get(0).onended = function(){
+                $('.audio-tag').hide()
+            }
             break;
         case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/kylo.jpg")':
+            $('.audio-tag').show()
+            $('.audio-tag').addClass('shake')
             $('#kyloRen').get(0).play();
+            $('#kyloRen').get(0).onended = function(){
+                $('.audio-tag').hide()
+            }
             break;
         case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/rey.jpeg")':
+            $('.audio-tag').show()
+            $('.audio-tag').addClass('shake')
             $('#rey').get(0).play();
+            $('#rey').get(0).onended = function(){
+                $('.audio-tag').hide()
+            }
             break;
     }
 }
 function checkMatch(){
     if(first_card_clicked === second_card_clicked && match_counter < 8  ){
-        $('.audio-tag').show()
         audioPlay();
         clickCount++;
         match_counter++;
@@ -263,4 +309,5 @@ function takeDamage(mismatchCountdown){
 }
 function removeHover(){
     $('.flipped').removeClass('front:hover');
+    // $('.container').removeClass('front:hover');
 }
