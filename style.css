@@ -226,7 +226,7 @@ div#reset:hover{
     width:56%;
 }
 
-    @keyframes shake {
+     @keyframes shake {
         0% { transform: translate(1px, 1px) rotate(0deg); }
         10% { transform: translate(-1px, -2px) rotate(-1deg); }
         20% { transform: translate(-3px, 0px) rotate(1deg); }
@@ -238,11 +238,12 @@ div#reset:hover{
         80% { transform: translate(-1px, -1px) rotate(1deg); }
         90% { transform: translate(1px, 2px) rotate(0deg); }
         100% { transform: translate(1px, -2px) rotate(-1deg); }
-      }
+      } 
       .shake {
         animation: shake 0.5s;
         animation-iteration-count: infinite;
       }
+
 
 /* iphone portrait media query */
 @media only screen 
@@ -258,7 +259,8 @@ div#reset:hover{
     }
     #health {
         height: 40%;
-        width: 100%;
+        /* width: 100%; */
+        width:379px;
         background-color: blue;
         border-radius: 13px;
         box-shadow: 0px 0px 30px 2px blue;
@@ -273,7 +275,8 @@ div#reset:hover{
     #banner{
        position: relative;
        width: 79%;
-       top: 120px;
+       /* top: 120px; */
+       top: 160px;
        left: 58%;
        transform: translate(-50%,-50%);
        margin:auto;
@@ -382,9 +385,10 @@ div#reset:hover{
         position: absolute;
         left: 0;
         transform: translate(-85%,-48.25%);
-    }
+    } 
     #health{
-        width:90%
+        /* width:90% */
+        width:320px !important;
     }
    #banner{
         position:relative;
@@ -433,7 +437,8 @@ div#reset:hover{
 
 #health {
     height: 13px;
-    width: 100%;
+    /* width: 100%; */
+    width:310px !important;
     background-color: blue;
     border-radius: 13px;
     box-shadow: 0px 0px 30px 2px blue;
@@ -497,6 +502,9 @@ div#reset{
     #stats{
         top:140px
     }
+    #banner{
+        top:45px;
+    }
 }
 
 @media screen and (max-height:543px){
@@ -514,6 +522,9 @@ div#reset{
     #stats{
         top:80px
     }
+    #banner{
+        top:45px;
+    }
 }
 @media screen and (max-height:469px){
     #stats{
@@ -525,6 +536,13 @@ div#reset{
         top:60px
     }
 }
+
+@media screen and (min-width:557px) and (max-width:799px){
+    #banner{
+        width:2px;
+    }
+}
+
 @media only screen and (max-width: 556px) and (min-width:426px){
     #stats{
          height:370px;
@@ -564,6 +582,7 @@ div#reset{
  
      #health {
          height: 14px;
+         width:250px !important;
          background-color: blue;
          border-radius: 13px;
          box-shadow: 0px 0px 30px 2px blue;
@@ -573,7 +592,7 @@ div#reset{
          width:65%;
          height:60%;
          position:relative;
-         left:250px
+         left:290px;
      }
      div#reset{
          font-size:8px;
@@ -652,6 +671,7 @@ div#reset{
  
      #health {
          height: 14px;
+         width:250px !important;
          background-color: blue;
          border-radius: 13px;
          box-shadow: 0px 0px 30px 2px blue;
@@ -659,9 +679,12 @@ div#reset{
      }
      #banner{
          width:65%;
+         /* width: 250px; */
          height:60%;
+         /* height: 90px; */
          position:relative;
-         left:250px
+         /* left:250px; */
+         left:230px
      }
      div#reset{
          font-size:8px;
@@ -701,3 +724,13 @@ div#reset{
      }
  
 }
+
+
+@media screen and (min-width:557px) and (max-width:799px){
+    #banner{
+        width:400px;
+        position:relative;
+        left:370px;
+
+    }
+} 
