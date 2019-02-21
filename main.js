@@ -16,16 +16,13 @@ function initializeApp(){
     card_clicked();
     $('#reset').click(resetGame); 
     $('.audio-tag').hide()
-    // $('.audio-tag').show()
 }
 function muteAudio(){
     if(!flag){
         $('.muteButton').text("Unmute Audio")
-        // $('.audio-tag').css('display','none');
         flag=true
     }else{
         $('.muteButton').text('Mute Audio')
-        // $('.audio-tag').css('display','block');
         flag=false
     }
 }
@@ -309,5 +306,4 @@ function takeDamage(mismatchCountdown){
 }
 function removeHover(){
     $('.flipped').removeClass('front:hover');
-    // $('.container').removeClass('front:hover');
 }
