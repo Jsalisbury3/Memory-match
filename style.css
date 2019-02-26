@@ -379,9 +379,9 @@ div#reset:hover{
         left: 0;
         transform: translate(-85%,-48.25%);
     } 
-    #health{
+    /* #health{
         width:320px !important;
-    }
+    } */
    #banner{
         position:relative;
         left:50%;

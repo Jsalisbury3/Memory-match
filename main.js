@@ -133,7 +133,7 @@ function audioPlay(){
         return;
     }
     switch (first_card_clicked){
-        case "url('https://jordansalisbury.me/star-wars/images/leia.jpg')":
+        case 'url("https://jordansalisbury.me/star-wars/images/leia.jpg")':
             $('.audio-tag').show()
             $('.audio-tag').addClass('shake')
             $('#leia').get(0).play();
