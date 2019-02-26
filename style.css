@@ -93,6 +93,14 @@ a:nth-child(2){
     border-radius: 13px;
     box-shadow: 0px 0px 7px 1.5px blue;
 }
+
+.health2{
+    height: 13px;
+    width: 379px;
+    background-color:hsl(229, 100%, 50%);
+    border-radius: 13px;
+    box-shadow: 0px 0px 7px 1.5px blue;
+}
 .muteButton{
     width: 57%;
     height: 9%;
