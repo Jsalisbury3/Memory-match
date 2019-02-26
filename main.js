@@ -27,8 +27,8 @@ function muteAudio(){
     }
 }
 function createBackOfCards(){
-    var imagesArray = ['images/yoda.png', 'images/darth-vader.jpg','images/han-solo.jpg', 'images/leia.jpg',
-    'images/luke-skywalker.jpg','images/R2-D2.jpg','images/rey.jpeg','images/kylo.jpg','images/c-3po.jpg','images/yoda.png',
+    var imagesArray = ['images/1yoda.png', 'images/darth-vader.jpg','images/han-solo.jpg', 'images/leia.jpg',
+    'images/luke-skywalker.jpg','images/R2-D2.jpg','images/rey.jpeg','images/kylo.jpg','images/c-3po.jpg','images/1yoda.png',
     'images/darth-vader.jpg','images/han-solo.jpg', 'images/leia.jpg','images/luke-skywalker.jpg','images/R2-D2.jpg',
     'images/rey.jpeg','images/kylo.jpg','images/c-3po.jpg'];
     var randomArray =[];
@@ -133,7 +133,7 @@ function audioPlay(){
         return;
     }
     switch (first_card_clicked){
-        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/leia.jpg")':
+        case "url('https://jordansalisbury.me/star-wars/images/leia.jpg')":
             $('.audio-tag').show()
             $('.audio-tag').addClass('shake')
             $('#leia').get(0).play();
@@ -141,7 +141,7 @@ function audioPlay(){
                 $('.audio-tag').hide()
             }
              break;
-        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/darth-vader.jpg")':
+        case "url('https://jordansalisbury.me/star-wars/images/darth-vader.jpg')":
             $('.audio-tag').show()
             $('.audio-tag').addClass('shake')
             $('#darthVader').get(0).play();
@@ -149,7 +149,7 @@ function audioPlay(){
                 $('.audio-tag').hide()
             }
             break;
-        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/yoda.png")':
+        case "url('https://jordansalisbury.me/star-wars/images/1yoda.png')":
             $('.audio-tag').show()
             $('.audio-tag').addClass('shake')
             $('#yoda').get(0).play();
@@ -157,7 +157,7 @@ function audioPlay(){
                 $('.audio-tag').hide()
             }
             break;
-        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/han-solo.jpg")':
+        case "url('https://jordansalisbury.me/star-wars/images/han-solo.jpg')":
             $('.audio-tag').show()
             $('.audio-tag').addClass('shake')
             $('#hanSolo').get(0).play();
@@ -165,7 +165,7 @@ function audioPlay(){
                 $('.audio-tag').hide()
             }
             break;
-        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/luke-skywalker.jpg")':
+        case "url('https://jordansalisbury.me/star-wars/images/luke-skywalker.jpg')":
             $('.audio-tag').show()
             $('.audio-tag').addClass('shake')
             $('#lukeSkywalker').get(0).play();
@@ -173,7 +173,7 @@ function audioPlay(){
                 $('.audio-tag').hide()
             }
             break;
-        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/c-3po.jpg")':
+        case "url('https://jordansalisbury.me/star-wars/images/c-3po.jpg')":
             $('.audio-tag').show()
             $('.audio-tag').addClass('shake')
             $('#c3po').get(0).play();
@@ -181,7 +181,7 @@ function audioPlay(){
                 $('.audio-tag').hide()
             }
             break;
-        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/R2-D2.jpg")':
+        case "url('https://jordansalisbury.me/star-wars/images/R2-D2.jpg')":
             $('.audio-tag').show()
             $('.audio-tag').addClass('shake')
             $('#r2-d2').get(0).play();
@@ -189,7 +189,7 @@ function audioPlay(){
                 $('.audio-tag').hide()
             }
             break;
-        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/kylo.jpg")':
+        case "url('https://jordansalisbury.me/star-wars/images/kylo.jpg')":
             $('.audio-tag').show()
             $('.audio-tag').addClass('shake')
             $('#kyloRen').get(0).play();
@@ -197,7 +197,7 @@ function audioPlay(){
                 $('.audio-tag').hide()
             }
             break;
-        case 'url("file:///Users/jordansalisbury/Desktop/LFZ/sw_memory_match/images/rey.jpeg")':
+        case "url('https://jordansalisbury.me/star-wars/images/rey.jpeg')":
             $('.audio-tag').show()
             $('.audio-tag').addClass('shake')
             $('#rey').get(0).play();
