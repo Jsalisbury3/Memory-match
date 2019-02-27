@@ -10,17 +10,29 @@
                 $('#whatIs').click(function(){
                     var whatIsPopUp = $('<div>').addClass('whatIs infoBox').html("<p> Star Wars is an American epic space opera franchise, created by George Lucas and centered around a film series that began with the eponymous 1977 movie </p>");
                     $('#main-content').append(whatIsPopUp);
-                    $('#whatIs').mouseout(function(){
-                        $('.whatIs').remove();
+                    // $('#whatIs').mouseout(function(){
+                    //     $('.whatIs').remove();
+                    // });
+                    $('#doYou').click(function(){
+                         $('.whatIs').remove();
+                    });
+                    $('#rules').click(function(){
+                         $('.whatIs').remove();
                     });
                 });
             }
             function rulesClick() {
                 $('#rules').click(function(){
-                    var rulesPopUp = $('<div>').addClass('rules infoBox').html("<p>This is a simple memory match card game.  As you match cards you will learn a little more about the Star Wars characters and maybe learn a little about the mechanics of the game as well.</p>");
+                    var rulesPopUp = $('<div>').addClass('rules infoBox').html("<p>This is a simple memory match card game.  As you match cards you will hear audio that corresponds to the Star Wars character that you matched. Once all cards have been matched, or if you fail to match all the cards before the lightsaber runs out, you will get a Star Wars surprise</p>");
                     $('#main-content').append(rulesPopUp);
-                    $('#rules').mouseout(function(){
-                        $('.rules').remove();
+                    // $('#rules').mouseout(function(){
+                    //      $('.rules').remove();
+                    // });
+                    $('#whatIs').click(function(){
+                         $('.rules').remove();
+                    });
+                    $('#doYou').click(function(){
+                         $('.rules').remove();
                     });
                 });
             }
@@ -28,8 +40,14 @@
                 $('#doYou').click(function(){
                     var doYouPopUp = $('<div>').addClass('doYou infoBox').html("<p>The force is strong with JavaScript, jQuery, HTML, and CSS!</p>");
                     $('#main-content').append(doYouPopUp);
-                    $('#doYou').mouseout(function(){
+                    // $('#doYou').mouseout(function(){
+                    //     $('.doYou').remove();
+                    // });
+                    $('#whatIs').click(function(){
                         $('.doYou').remove();
+                    });
+                    $('#rules').click(function(){
+                         $('.doYou').remove();
                     });
                 });
             }

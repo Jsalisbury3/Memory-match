@@ -22,10 +22,9 @@ html{
     width: 35%;
     margin-top: 3%;
 }
-
-    .play_game_button:hover{
-        box-shadow: 0px 0px 7px 4px white;
-    }
+.play_game_button:hover{
+    box-shadow: 0px 0px 7px 4px white;
+}
 
  .play_game_button{
     position: absolute;
@@ -36,13 +35,13 @@ html{
     top: 60%;
     background-color: black;
     color: yellow;
-     font-weight: bold; 
+    font-weight: bold; 
     box-shadow: 3px 0 yellow, 0 -3px yellow, -3px 0 yellow, 0 4px yellow;
     font-size: 66px;
     text-align: center;
     margin-top: 0px;
     font-family: 'Poller One';
-    text-decoration: none;
+    text-decoration: none; 
 } 
 @media only screen
   and (min-device-width: 320px) 
@@ -81,23 +80,26 @@ html{
         margin-top: 0px;
     }
 }
-@media only screen and (max-width: 1250px) and (min-width: 400px) {
+@media only screen and (max-width:970px) and (min-width:635px), screen and (max-height:770px) and (min-height:523px){
     .play_game_button{
-        background-color:transparent;
-        box-shadow: 0px 0px 0px transparent;
+        font-size:44px;
     }
 }
-
+@media only screen and (max-height:522px) and (min-height:192px){
+    .play_game_button{
+        font-size:35px;
+    }
+}
 @media only screen and (max-width: 636px){
     .play_game_button{
-        font-size:50px;
+        font-size:35px;
         left:180px;
     }
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 440px){
     .play_game_button{
-        font-size:50px;
+        font-size:25px;
         left:130px;
     }
 }

@@ -250,7 +250,7 @@ function resetGame() {
     count = 1;
     mismatchesAllowed = 10;
     games_played++;
-    $('#health').css("width","379px");
+    $('#health').css("width","340px");
     $('.games-played .value').text(games_played);
     clickCount = 0;
     match_counter = 0;
